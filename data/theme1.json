@@ -1,0 +1,933 @@
+[
+  {
+    "theme": 1,
+    "question": "Un sistema experto, obtiene el conocimiento de:",
+    "options": {
+      "a": "De documentación que el sistema recopila y el tratamiento de este conocimiento de un experto que verifica la validación de este conocimiento.",
+      "b": "De un humano con conocimientos amplios sobre el tema.",
+      "c": "Documentación."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "Los Sistemas Basados en el Conocimiento suelen:",
+    "options": {
+      "a": "reunir conocimiento de diversos temas",
+      "b": "reunir conocimiento específico de un dominio de problema",
+      "c": "utilizar conocimiento prediseñado"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "Los sistemas basados en conocimiento son la mejor alternativa para todos los problemas.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "Entre las tareas del Ingeniero de conocimiento se encuentran la implementación y la extracción de requisitos.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál de las siguientes tareas NO le corresponde a un Ingeniero del Conocimiento?",
+    "options": {
+      "a": "Realizar los test de prueba del SBC",
+      "b": "Cumplir los plazos del proyecto",
+      "c": "Extraer el conocimiento necesario",
+      "d": "Diseñar el SBC"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "Un sistema basado en el conocimiento sufrirá modificaciones cuando queramos adaptar nuestro sistema a otro lenguaje de programación diferente.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "¿De los siguientes tipos de problema, cuáles resultan más propicios para ser resueltos mediante un SBC?",
+    "options": {
+      "a": "Aquellos en los que disponemos de fuentes de conocimiento y cuyos requisitos son precisos.",
+      "b": "Aquellos cuyas entradas son completas y pueden ser resueltos usando algoritmos clásicos.",
+      "c": "Aquellos cuyos requisitos son subjetivos, cuyas entradas poseen incertidumbre, que no pueden ser resueltos con algoritmos clásicos y se dispone de fuentes de información."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "¿Qué característica NO corresponde a un sistema experto?",
+    "options": {
+      "a": "Poseen una base de conocimiento permanente",
+      "b": "Requieren conocimiento de un experto humano",
+      "c": "Interactúan con el usuario",
+      "d": "Justifican como obtienen la solución"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "El SBC al ser diseñado por humanos nunca podrá resolver el problema para el que está diseñado mejor que un humano.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "Indique cuál de los siguientes problemas NO es adecuado para el uso de un SBC:",
+    "options": {
+      "a": "Analizador sintáctico de código en C.",
+      "b": "Planificación y control de una planta de producción de coches.",
+      "c": "Diagnosticar infecciones en la sangre."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "¿Por qué es importante la Ingeniería del conocimiento?",
+    "options": {
+      "a": "El conocimiento sobrevive a las implementaciones concretas del sistema.",
+      "b": "El consumo de recursos de sus SBC es menor que en una base de datos.",
+      "c": "El obtener el conocimiento sin ella es caro.",
+      "d": "El conocimiento tiene valor por sí mismo.",
+      "e": "Se puede buscar muy rápidamente.",
+      "f": "No se pueden resolver problemas sin una base de conocimiento.",
+      "g": "Los errores en el conocimiento son decisivos para el buen funcionamiento de un SBC.",
+      "h": "El tener una BC bien definida e independiente del mecanismo de inferencia facilita el mantenimiento."
+    },
+    "answer": [
+      "a",
+      "d",
+      "g",
+      "h"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "Todos los sistemas basados en el conocimiento se pueden considerar sistemas expertos.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "Un SBC es capaz de soportar la representación implícita del conocimiento.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a",
+    "description": "El motor de inferencia puede utilizar técnicas como razonamiento por defecto, o razonamiento por sentido común hace uso de un conocimiento implícito."
+  },
+  {
+    "theme": 1,
+    "question": "Según el esquema de los sistemas basados en el conocimiento, la interfaz de entrada/salida se comunica, además de con el usuario, con el motor de inferencias, pero no directamente con la base de conocimientos.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Debe de incorporar a la base de conocimiento los datos que vaya aportando el usuario."
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál no es una ventaja específica de los sistemas basados en conocimiento?",
+    "options": {
+      "a": "Pueden explicar el razonamiento que conduce a la answer",
+      "b": "Tienen el conocimiento organizado mediante una jerarquía, lo que facilita la answer rápida",
+      "c": "Responden de forma no subjetiva"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "Una de las ventajas de los sistemas basados en el conocimiento es poder incorporar experiencia múltiple porque permite a varios usuarios acceder al mismo tiempo al sistema.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Lo que permite es incorporar conocimiento de múltiples expertos y/o fuentes."
+  },
+  {
+    "theme": 1,
+    "question": "El motor de inferencia nunca se encarga de darle sentido (interpretar) el conocimiento, solo lo utiliza para deducir cosas.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "¿De qué son dependientes los algoritmos de inferencia?",
+    "options": {
+      "a": "Del formalismo de representación del conocimiento",
+      "b": "De ninguno de los anteriores",
+      "c": "Del problema que se pretende resolver"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "En un(a) _____ se utilizan sinónimos para relacionar términos.",
+    "options": {
+      "a": "folksonomía",
+      "b": "tesauro",
+      "c": "ontología",
+      "d": "taxonomía"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "El gestor en el desarrollo de un SBC se encarga de:",
+    "options": {
+      "a": "Determinar los plazos límites para los desarrolladores, los expertos y los usuarios",
+      "b": "Determinar los plazos límites para los desarrolladores, los ingenieros del conocimiento y los expertos.",
+      "c": "Ninguna de las respuestas anteriores es correcta.",
+      "d": "Determinar los plazos límites sólo para el ingeniero del conocimiento."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "DENDRAL (1965):",
+    "options": {
+      "a": "Identifica estructuras de minerales",
+      "b": "Identifica estructuras de moléculas orgánicas",
+      "c": "Identifica infecciones en sangre e introduce Factores de Certeza"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál de las siguientes NO es una característica de un SBC?",
+    "options": {
+      "a": "Compensa errores que se puedan producir en la introducción del conocimiento",
+      "b": "No necesitan de un algoritmo específico diseñado para el problema",
+      "c": "Se puede combinar la experiencia de varios SBC",
+      "d": "No precisa de gran cantidad de requisitos físicos"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "Seleccione el orden correcto del Ciclo de Vida tradicional para el desarrollo de una BC:",
+    "options": {
+      "a": "1. Adquirir, 2. Identificar, 3. Formalizar, 4. Conceptualizar, 5. Implementar, 6. Validar.",
+      "b": "1. Identificar, 2. Adquirir, 3. Conceptualizar, 4. Formalizar, 5. Implementar, 6. Validar.",
+      "c": "1. Identificar, 2. Formalizar, 3. Adquirir, 4. Conceptualizar, 5. Implementar, 6. Verificar.",
+      "d": "1. Conceptualizar, 2. Identificar, 3. Adquirir, 4. Formalizar, 5. Implementar, 6. Validar."
+    },
+    "answer": "b",
+    "description": "El orden correcto es: Identificar tarea/viabilidad -> Adquirir conocimiento -> Conceptualizar (ontología) -> Formalizar (modelo formal) -> Implementar -> Verificar/Validar."
+  },
+  {
+    "theme": 1,
+    "question": "Seleccione cuál de las siguientes características NO es una ventaja de los SBC:",
+    "options": {
+      "a": "Experiencia siempre superior a la humana",
+      "b": "Funcionamiento permanente",
+      "c": "answer rápida",
+      "d": "Disponibilidad completa"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "El ingeniero del conocimiento:",
+    "options": {
+      "a": "Dirige el correcto desarrollo del sistema",
+      "b": "Realiza las inferencias ontológicas",
+      "c": "Extrae los conceptos del dominio del problema",
+      "d": "Decide la representación de los conceptos"
+    },
+    "answer": [
+      "a",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "Los algoritmos de inferencia:",
+    "options": {
+      "a": "Dependen tanto del problema como del modelo formal del conocimiento, pero es más relevante el modelo formal.",
+      "b": "Independientes del modelo formal del conocimiento, pero dependientes del problema.",
+      "c": "Son independientes del problema pero dependientes del modelo formal del conocimiento usado para solucionar el problema."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "Los SBCs almacenan la representación explícita del conocimiento, pero no hacen uso de él.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuáles de estas tareas NO corresponde a un ingeniero del conocimiento?",
+    "options": {
+      "a": "Validar",
+      "b": "Extraer conocimiento",
+      "c": "Implementar",
+      "d": "Entregar diseño"
+    },
+    "answer": [
+      "a",
+      "b"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "Un Sistema Basado en Conocimiento es capaz de resolver problemas con información incompleta.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "MYCIN (1970):",
+    "options": {
+      "a": "Prospección de minerales y tratamiento de incertidumbre.",
+      "b": "Identificar infecciones en sangre e introduce Factores de Certeza.",
+      "c": "Asistir a la compra de sistemas de computación VAX."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "PROSPECTOR (1974):",
+    "options": {
+      "a": "Identificación de estructuras de moléculas orgánicas.",
+      "b": "Asistir a la compra de sistemas VAX.",
+      "c": "Prospección de minerales e introduce nuevos métodos para el tratamiento de la incertidumbre."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "XCON (1980):",
+    "options": {
+      "a": "Asistir a la compra de sistemas de computación VAX.",
+      "b": "Diagnóstico médico mediante factores de certeza.",
+      "c": "Análisis de viabilidad de proyectos de software."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál de las siguientes es una ventaja de los SBC?",
+    "options": {
+      "a": "Ser capaz de incorporar el conocimiento de varios expertos y/o fuentes de conocimiento distintos.",
+      "b": "Ser capaz de generar inferencias.",
+      "c": "Ser totalmente dependiente del problema."
+    },
+    "answer": [
+      "a",
+      "b"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "La información se diferencia del conocimiento en que la información:",
+    "options": {
+      "a": "No aporta de forma directa el 'saber qué hacer' para resolver un problema.",
+      "b": "Se puede representar y guardar en un soporte físico.",
+      "c": "No depende del contexto, solo son datos y significado."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "En la fase de implementación de la formalización, los actores que participan más activamente son el ingeniero del conocimiento y el desarrollador/es.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál suele ser la fase más compleja en la construcción de un sistema experto?",
+    "options": {
+      "a": "Todas son igual de complejas",
+      "b": "Adquirir conocimiento",
+      "c": "Implementar la formalización",
+      "d": "Identificar la tarea",
+      "e": "Verificar y Validar",
+      "f": "Conceptualizar",
+      "g": "Formalizar"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "El motor de inferencia es independiente del problema y dependiente del formalismo de representación del conocimiento.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "La ingeniería del conocimiento:",
+    "options": {
+      "a": "Genera bases de conocimiento",
+      "b": "Utiliza sistemas de razonamiento",
+      "c": "Produce modelos de razonamiento",
+      "d": "Produce sistemas basados en el conocimiento",
+      "e": "Utiliza conocimiento sobre el dominio del problema"
+    },
+    "answer": [
+      "b",
+      "d",
+      "e"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuáles de estas options son ventajas de un SBC? (Selecciona 4)",
+    "options": {
+      "a": "Siempre tiene estructura arbórea",
+      "b": "El nivel de experiencia combinada de muchos SBC puede exceder el de un solo especialista.",
+      "c": "Funciona permanentemente",
+      "d": "La respuestas pueden ser dudosas según qué campos",
+      "e": "Tiene una answer más rápida que un ser humano.",
+      "f": "El nivel de experiencia de un SBC es mayor que el de un especialista.",
+      "g": "El conocimiento de varios especialistas está disponible para trabajar en cualquier momento.",
+      "h": "Las búsquedas son de orden logarítmico"
+    },
+    "answer": [
+      "b",
+      "c",
+      "e",
+      "g"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "El desarrollador de un sistema basado en el conocimiento debe ser experto en el campo que intenta modelar.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "Un ingeniero del conocimiento debe saber cómo:",
+    "options": {
+      "a": "Se almacena el conocimiento",
+      "b": "Se implementa el conocimiento",
+      "c": "Se adquiere el conocimiento",
+      "d": "Se construye un robot que posea conocimiento"
+    },
+    "answer": [
+      "a",
+      "c"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "Dado un problema abordado por la Ingeniería del Conocimiento en el cual se presenten errores en el conocimiento, dichos errores serán decisivos.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "Los SBC no son adecuados para problemas poco estructurados. Por ejemplo, aquellos donde los requisitos de la solución sean subjetivos.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Al contrario: los SBC son precisamente ideales para problemas con requisitos subjetivos o mal estructurados donde los algoritmos clásicos fallan."
+  },
+  {
+    "theme": 1,
+    "question": "Un Sistema Experto requiere razonamiento humano.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Un SE emula el razonamiento humano, pero es un sistema computacional; no requiere al humano 'dentro' del proceso una vez operativo."
+  },
+  {
+    "theme": 1,
+    "question": "¿De los siguientes procesos, cuál de ellos NO corresponde a la ingeniería del conocimiento?",
+    "options": {
+      "a": "Hacer operativo un conjunto de conocimientos",
+      "b": "Formalizar la información del problema",
+      "c": "Definir los requisitos del problema",
+      "d": "Adquirir información del problema"
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "Un SBC tiene un funcionamiento algorítmico.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Su funcionamiento es heurístico. Los algoritmos tradicionales son para problemas perfectamente definidos y estructurados."
+  },
+  {
+    "theme": 1,
+    "question": "Los sistemas basados en el conocimiento se componen de un mecanismo de inferencia y una base del conocimiento.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "Durante el desarrollo de un SBC el ingeniero de conocimiento se encarga de:",
+    "options": {
+      "a": "Implementar el SBC",
+      "b": "Extraer el conocimiento necesario de los expertos",
+      "c": "Validar el conocimiento del SBC",
+      "d": "Todas las anteriores son correctas"
+    },
+    "answer": "c",
+    "description": "Nota: Aunque participa en la extracción, su responsabilidad clave en esta fase según la solución es la validación del conocimiento."
+  },
+  {
+    "theme": 1,
+    "question": "Seleccione las afirmaciones correctas:",
+    "options": {
+      "a": "Un sistema basado en conocimiento es un tipo de sistema experto.",
+      "b": "En relación con la definición de conocimiento, la información es datos con un significado asociado.",
+      "c": "Una de las características de los sistemas expertos es que deben justificar la solución del problema.",
+      "d": "Una de las tareas de un ingeniero de conocimiento es aportar el conocimiento experto al sistema.",
+      "e": "Un sistema de diagnóstico médico es un ejemplo de sistema experto."
+    },
+    "answer": [
+      "b",
+      "c"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "¿Qué tareas debe realizar un ingeniero del conocimiento para construir la base de conocimiento?",
+    "options": {
+      "a": "Investigar el problema, aprender los conceptos importantes y como se relacionan, decidir un formalismo de representación, y adquirir el conocimiento necesario reutilizando también conocimiento existente",
+      "b": "Investigar el problema y como solucionarlo.",
+      "c": "Investigar el problema, aprender la terminología del mismo y posibles soluciones",
+      "d": "Investigar el problema, aprender la terminología del mismo, y reutilizar conocimiento existente"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "¿Qué es un Sistema Basado en el Conocimiento?",
+    "options": {
+      "a": "Sistemas que utilizan conocimiento experto para resolver un problema complejo",
+      "b": "Es un sistema experto",
+      "c": "Sistema que usa conocimiento específico del dominio para resolver un problema"
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál de las siguientes es una característica que diferencia el concepto de SBC y el de Sistema Experto?",
+    "options": {
+      "a": "Los SBC representan el conocimiento explícitamente de forma separada",
+      "b": "Los SBC tienen un funcionamiento no algorítmico, incluye heurísticas y estrategias",
+      "c": "Los SBC usan conocimiento específico del dominio del problema, el cuál puede no ser solo conocimiento experto"
+    },
+    "answer": "c",
+    "description": "Mientras que el Sistema Experto se centra en el conocimiento de un experto humano, el SBC es más amplio y puede usar cualquier conocimiento del dominio (manuales, bases de datos, etc.)."
+  },
+  {
+    "theme": 1,
+    "question": "La ingeniería del conocimiento es importante porque:",
+    "options": {
+      "a": "El conocimiento nos permite obtener grandes beneficios económicos.",
+      "b": "El conocimiento tiene valor en sí mismo y sobrevive a las implementaciones.",
+      "c": "El conocimiento nos permite obtener beneficios económicos y sociales.",
+      "d": "Las tres respuestas anteriores son correctas"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "En la actualidad, una tendencia muy importante en la representación del conocimiento es la de describir conceptualmente los dominios.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "El conocimiento de un sistema experto está basado en el aportado por un humano, ¿cómo afectará esto a la productividad del sistema con respecto a una solución basada en otras técnicas?",
+    "options": {
+      "a": "La reducirá",
+      "b": "No afecta para nada a la productividad",
+      "c": "La mejorará"
+    },
+    "answer": "c",
+    "description": "Si el problema es adecuado para utilizar un SBC es porque no tiene solución eficiente con otras técnicas, mientras que el experto es capaz de resolverlo, mejorando así la productividad global."
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál de las siguientes NO es una ventaja de un sistema basado en el conocimiento?",
+    "options": {
+      "a": "Capacidad de desarrollar el razonamiento que ha seguido para la solución dada.",
+      "b": "Capacidad de tomar una decisión entre conocimientos antepuestos por expertos distintos",
+      "c": "Capacidad para responder con más rapidez que un humano."
+    },
+    "answer": "b",
+    "description": "El SBC no suele 'decidir' por sí solo ante conflictos de expertos; es el Ingeniero del Conocimiento quien debe refinar y validar esa base para que sea coherente."
+  },
+  {
+    "theme": 1,
+    "question": "El ciclo de vida tradicional para el desarrollo de una BC es: 1-Identificar. 2-Adquirir. 3-Conceptualizar. 4-Formalizar. 5-Implementar. ¿Cuál es el paso 6?",
+    "options": {
+      "a": "Mantenimiento.",
+      "b": "Refinar.",
+      "c": "Verificar y Validar."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "Marque la afirmación correcta sobre el ciclo de vida para el desarrollo de un SBC:",
+    "options": {
+      "a": "Las fases más importantes son Identificar, implementar y verificar",
+      "b": "Todas las fases son importantes en sí",
+      "c": "La fase más compleja es la adquisición del conocimiento",
+      "d": "La fase más importante es la adquisición del conocimiento"
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuáles de estas son características de cualquier Sistema Basado en el Conocimiento?",
+    "options": {
+      "a": "Consisten en realizar consultas a una base de conocimiento",
+      "b": "Ninguna de las restantes es cierta",
+      "c": "Utiliza conocimiento específico para resolver un determinado problema.",
+      "d": "Simula el razonamiento de un humano."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "Supongamos que tenemos un Sistema Experto que ha demostrado un teorema matemático hasta ahora desconocido. ¿Sería posible comprobar los pasos seguidos por el Sistema Experto?",
+    "options": {
+      "a": "No",
+      "b": "Si"
+    },
+    "answer": "b",
+    "description": "Una característica fundamental de los SE es la capacidad de explicación o trazabilidad del razonamiento."
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál de estos problemas son los típicos abordados por la ingeniería del conocimiento?",
+    "options": {
+      "a": "El problema de aprender a partir de datos",
+      "b": "El problema de representar el conocimiento de forma abstracta procesable por un computador, apoyándose en las estructuras de datos.",
+      "c": "Creación de los métodos de inferencia que permitirán obtener conclusiones a partir de los datos de entrada.",
+      "d": "El problema de la adquisición del conocimiento y el de cómo almacenarlo."
+    },
+    "answer": [
+      "b",
+      "c",
+      "d"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "De las siguientes formas de organizar el conocimiento, ¿cuál de ellas NO establece una relación jerárquica entre sus elementos?",
+    "options": {
+      "a": "Folksonomías",
+      "b": "Ontologías",
+      "c": "Tesauros",
+      "d": "Taxonomías"
+    },
+    "answer": "a",
+    "description": "Las folksonomías se basan en etiquetas (tags) creadas por usuarios de forma horizontal, sin una jerarquía predefinida, a diferencia de las taxonomías u ontologías."
+  },
+  {
+    "theme": 1,
+    "question": "Un sistema basado en el conocimiento...",
+    "options": {
+      "a": "Siempre aporta los razonamientos que llevan a cada conclusión.",
+      "b": "Las respuestas que ofrece son sólidas e imparciales.",
+      "c": "Debe ser implementado en sistemas de alto coste.",
+      "d": "Puede ser más rápido que consultar a un humano en algunas situaciones de emergencia."
+    },
+    "answer": [
+      "b",
+      "d"
+    ],
+    "description": "Puede aportar los razonamientos de cada conclusión y es recomendable, pero no siempre se hace (por eso la 'a' no es obligatoria)."
+  },
+  {
+    "theme": 1,
+    "question": "Un Sistema Basado en el Conocimiento...",
+    "options": {
+      "a": "Su nivel de experiencia nunca podrá superar al de un humano",
+      "b": "Su base de conocimiento es independiente del problema",
+      "c": "Posee una base de conocimiento, y, por medio del motor de inferencias, puede resolver problemas con incertidumbre"
+    },
+    "answer": "c",
+    "description": "Si usa diferentes fuentes de información y ha adquirido conocimiento de diferentes especialistas, su nivel de experiencia podrá superar al de un solo humano."
+  },
+  {
+    "theme": 1,
+    "question": "Los sistemas expertos:",
+    "options": {
+      "a": "Suelen interaccionar con los usuarios para solicitar la información necesaria para resolver el problema",
+      "b": "Interaccionan con el ingeniero del conocimiento durante su funcionamiento",
+      "c": "Suelen interaccionar con los usuarios para solicitar la información necesaria para resolver el problema y facilitar la justificación de sus respuestas"
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál de las siguientes NO es una etapa del ciclo de vida para el desarrollo de un SBC?",
+    "options": {
+      "a": "Identificación de la tarea",
+      "b": "Estructuración del conocimiento en conceptos y tareas",
+      "c": "Formalización del conocimiento",
+      "d": "Ninguna de las anteriores es correcta"
+    },
+    "answer": "d",
+    "description": "Todas las anteriores (Identificación, Estructuración/Conceptualización y Formalización) SÍ son etapas del ciclo de vida."
+  },
+  {
+    "theme": 1,
+    "question": "Marque la answer correcta:",
+    "options": {
+      "a": "La ingeniería del conocimiento produce SBC.",
+      "b": "Los SBC son creados a partir de las experiencias de las máquinas.",
+      "c": "SBC (sistema basado en el conocimiento) es lo mismo que SE (sistema experto)."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 1,
+    "question": "La tarea de validación de un SBC la realiza:",
+    "options": {
+      "a": "El Ingeniero de Conocimiento.",
+      "b": "Los expertos.",
+      "c": "El gestor."
+    },
+    "answer": "b",
+    "description": "Aunque el ingeniero coordina el proceso, es el experto quien tiene la autoridad para validar si el conocimiento del sistema es correcto."
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuáles NO son ventajas de los SBC?",
+    "options": {
+      "a": "Presentan respuestas rápidas a problemas complejos",
+      "b": "Pueden presentar la experiencia múltiple de diferentes expertos",
+      "c": "Presentan una explicación del razonamiento",
+      "d": "Presentan respuestas subjetivas"
+    },
+    "answer": "d",
+    "description": "Un SBC busca ofrecer respuestas sólidas e imparciales; la subjetividad se considera una desventaja o algo a evitar mediante la validación."
+  },
+  {
+    "theme": 1,
+    "question": "¿Qué hito marca la evolución de los SBC en la década de los 60?",
+    "options": {
+      "a": "Sistemas basados en reglas (Mycin).",
+      "b": "Sistemas de propósito general (GPS).",
+      "c": "Conceptualización del conocimiento (Ontologías)."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "Relacione la década de los 80 y 90 con su metodología correspondiente:",
+    "options": {
+      "a": "80: Madurez (CommonKADS) | 90: Adolescencia (KADS).",
+      "b": "80: GPS | 90: Mycin.",
+      "c": "80: Adolescencia de metodología (KADS) | 90: Madurez de metodología (CommonKADS)."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 1,
+    "question": "Señale de estas respuestas las que se consideren CONOCIMIENTO:",
+    "options": {
+      "a": "Información sobre la cobertura del móvil",
+      "b": "Seco",
+      "c": "S.O.S",
+      "d": "...---...",
+      "e": "Cambio de la presión meteorológica",
+      "f": "5"
+    },
+    "answer": [
+      "a",
+      "e"
+    ],
+    "description": "El conocimiento implica interpretación y contexto (saber que un cambio de presión indica clima o que la cobertura permite la comunicación), mientras que el resto son datos o señales sin procesar."
+  },
+  {
+    "theme": 1,
+    "question": "Una de las competencias del ingeniero del conocimiento es la implementación del mismo SBC.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "La implementación física suele recaer en el desarrollador; el ingeniero del conocimiento se centra en el modelado, adquisición y validación."
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuál de las siguientes afirmaciones sobre los SBC es FALSA?",
+    "options": {
+      "a": "Explican cómo han llegado a una conclusión.",
+      "b": "Son tolerantes a fallos en el conocimiento.",
+      "c": "Son fácilmente escalables."
+    },
+    "answer": "b",
+    "description": "Los SBC son sensibles a errores en la base de conocimiento; un error en una regla o hecho puede invalidar toda la inferencia."
+  },
+  {
+    "theme": 1,
+    "question": "En la estructura de un SBC, la Base de Conocimiento, el Motor de Inferencia y la Interfaz E/S aparecen:",
+    "options": {
+      "a": "Separadas.",
+      "b": "Unas veces juntas y otras separadas, depende del sistema.",
+      "c": "Juntas."
+    },
+    "answer": "a",
+    "description": "La separación modular es la característica clave que permite actualizar el conocimiento sin cambiar el motor de búsqueda."
+  },
+  {
+    "theme": 1,
+    "question": "El proceso de validación y verificación solo requiere la intervención de los expertos.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Requiere también al Ingeniero del Conocimiento para la parte técnica y, muy importante, la validación final por parte del usuario (sus expectativas no son irrelevantes)."
+  },
+  {
+    "theme": 1,
+    "question": "¿Cómo colaboran ingenieros del conocimiento y expertos para crear un SBC?",
+    "options": {
+      "a": "Ambos conocen el tema que están tratando y se ayudan mutuamente para implementarlo.",
+      "b": "Se complementan: el ingeniero no es experto en el campo pero sabe modelar, y el experto conoce el tema pero no sabe sobre modelado."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "Una de las posibles áreas de aplicación de los SBC es:",
+    "options": {
+      "a": "Sistemas Empotrados.",
+      "b": "Sistemas de Predicción.",
+      "c": "Sistemas de Tiempo Real."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 1,
+    "question": "En relación al ciclo de vida en el desarrollo de un SBC, la etapa de formalización:",
+    "options": {
+      "a": "Es aquella etapa en la que, a partir de un modelo formal, implementamos el sistema con ayuda de un sistema de desarrollo de SBC.",
+      "b": "No existe dicha etapa en este ciclo de vida.",
+      "c": "Es aquella etapa en la que pasamos de un modelo conceptual del conocimiento a un modelo más manejable por una máquina y más fácil de implementar.",
+      "d": "Es aquella etapa en la que se comprueba que el sistema funciona tal como se había definido."
+    },
+    "answer": "c",
+    "description": "La formalización es el puente entre el modelo conceptual (humano) y el código final (máquina)."
+  },
+  {
+    "theme": 1,
+    "question": "El gestor de un sistema SBC interactúa con:",
+    "options": {
+      "a": "Ingeniero del Conocimiento",
+      "b": "Desarrolladores",
+      "c": "Expertos",
+      "d": "Usuarios"
+    },
+    "answer": [
+      "a",
+      "b"
+    ]
+  },
+  {
+    "theme": 1,
+    "question": "Los sistemas expertos se ven en la necesidad de interactuar con el usuario durante la resolución del problema.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a",
+    "description": "Interactuar no es indispensable (ej. predicción meteorológica automática), pero suele ser común para solicitar datos que el sistema no posee inicialmente."
+  },
+  {
+    "theme": 1,
+    "question": "Un SE requiere razonamiento humano.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "El SE emula el razonamiento humano, pero una vez construido, el razonamiento es ejecutado de forma autónoma por la máquina."
+  },
+  {
+    "theme": 1,
+    "question": "¿Cuáles de las siguientes afirmaciones sobre la jerarquía de sistemas son CIERTAS?",
+    "options": {
+      "a": "Un Sistema Experto es un Sistema Basado en el Conocimiento",
+      "b": "Un Sistema Basado en el Conocimiento nunca puede ser un Sistema Experto",
+      "c": "Todos los Sistemas Basados en el Conocimiento son Sistemas Inteligentes",
+      "d": "Un Sistema Basado en el Conocimiento puede ser un Sistema Experto",
+      "e": "Todos los Sistemas Expertos son Sistemas Inteligentes",
+      "f": "Todos los Sistemas Inteligentes son Sistemas Basados en el Conocimiento",
+      "g": "Un Sistema Basado en el Conocimiento puede no ser un Sistema Experto",
+      "h": "Un Sistema Experto nunca puede ser un Sistema Basado en el Conocimiento",
+      "i": "Todos los Sistemas Basados en el Conocimiento son Sistemas Expertos",
+      "j": "Un Sistema Experto puede no ser un Sistema Basado en el Conocimiento"
+    },
+    "answer": [
+      "a",
+      "c",
+      "d",
+      "e",
+      "g"
+    ],
+    "description": "Recuerda: Todo SE es un SBC, y todo SBC es un Sistema Inteligente. Pero hay SBCs que no llegan a ser SE porque no usan conocimiento puramente experto."
+  }
+]

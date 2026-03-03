@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Hub · Ingeniería del Conocimiento · UGR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0d0f14;--surface:#151820;--surface2:#1c202c;
+      --border:#272b38;--border2:#313749;
+      --text:#e8eaf0;--text2:#8a8fa8;--text3:#555a72;
+      --accent:#6c8fff;--accent2:#4f6de0;
+      --green:#3ecf8e;--red:#f26b6b;--amber:#f0a84a;--purple:#a78bfa;
+      --r:14px;--rs:8px;--shadow:0 4px 24px rgba(0,0,0,.4);
+    }
+    [data-theme="light"]{
+      --bg:#f0f2f7;--surface:#ffffff;--surface2:#f5f6fa;
+      --border:#e2e5ef;--border2:#d0d4e3;
+      --text:#1a1d2e;--text2:#5a6080;--text3:#9ba3bf;
+      --shadow:0 4px 24px rgba(0,0,0,.1);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;transition:background .25s,color .25s}
+    .wrap{max-width:860px;margin:0 auto;padding:0 20px 80px}
+
+    /* HEADER */
+    header{padding:44px 0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .header-left{display:flex;flex-direction:column;gap:5px}
+    .htag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:2px;text-transform:uppercase}
+    header h1{font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1}
+    header h1 span{color:var(--accent)}
+    header p{font-size:13px;color:var(--text2);margin-top:2px}
+    .header-actions{display:flex;align-items:center;gap:8px}
+    .icon-btn{width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all .2s;flex-shrink:0;color:var(--text2)}
+    .icon-btn:hover{border-color:var(--accent);color:var(--text)}
+
+    /* CONFIG PANEL */
+    .config-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:22px 24px;margin-bottom:20px}
+    .config-section{margin-bottom:20px}
+    .config-section:last-child{margin-bottom:0}
+    .config-label{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:10px;display:block}
+    .theme-checks{display:flex;gap:8px;flex-wrap:wrap}
+    .tchk{position:relative}
+    .tchk input{position:absolute;opacity:0;width:0;height:0}
+    .tchk-lbl{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text2);background:var(--surface2);border:1px solid var(--border2);border-radius:var(--rs);padding:9px 16px;cursor:pointer;transition:all .18s;user-select:none}
+    .tchk input:checked + .tchk-lbl{background:rgba(108,143,255,.1);border-color:var(--accent);color:var(--text)}
+    .tchk-dot{width:8px;height:8px;border-radius:50%;background:var(--border2);transition:background .18s;flex-shrink:0}
+    .tchk input:checked + .tchk-lbl .tchk-dot{background:var(--accent)}
+    .count-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .cnt-btn{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;padding:8px 18px;border-radius:var(--rs);border:1px solid var(--border2);background:var(--surface2);color:var(--text2);cursor:pointer;transition:all .18s}
+    .cnt-btn:hover{border-color:var(--border);color:var(--text)}
+    .cnt-btn.active{background:rgba(108,143,255,.1);border-color:var(--accent);color:var(--accent)}
+    .cnt-input{font-family:'JetBrains Mono',monospace;font-size:13px;width:80px;padding:8px 12px;border-radius:var(--rs);border:1px solid var(--border2);background:var(--surface2);color:var(--text);outline:none;transition:border-color .2s;text-align:center}
+    .cnt-input:focus{border-color:var(--accent)}
+    .cnt-input::placeholder{color:var(--text3);font-size:12px}
+    .config-divider{height:1px;background:var(--border);margin:18px 0}
+    .config-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .avail-note{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3)}
+
+    /* BUTTONS */
+    .btn{font-family:'Sora',sans-serif;font-size:12px;font-weight:600;border:none;border-radius:var(--rs);padding:8px 14px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+    /* Primario: solo "Ver resultado" */
+    .bp{background:var(--accent);color:#fff}
+    .bp:hover{background:var(--accent2);transform:translateY(-1px)}
+    /* Secundario neutro */
+    .bg{background:var(--surface2);color:var(--text2);border:1px solid var(--border2)}
+    .bg:hover{color:var(--text);background:var(--border)}
+    /* Ghost: solo contorno, para acciones de baja prioridad */
+    .btn-ghost{background:transparent;color:var(--text3);border:1px solid var(--border2)}
+    .btn-ghost:hover{color:var(--text);border-color:var(--border);background:var(--surface2)}
+    .btn.danger{border-color:var(--red)!important;color:var(--red)!important;background:rgba(242,107,107,.06)!important}
+    .btn-start{padding:11px 28px;font-size:13px}
+
+    /* ── STICKY TOOLBAR ── */
+    .toolbar-wrap{
+      position:sticky;top:0;z-index:50;
+      padding:6px 0 6px;
+      background:color-mix(in srgb, var(--bg) 82%, transparent);
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      -webkit-mask-image:linear-gradient(to bottom,black 75%,transparent 100%);
+      mask-image:linear-gradient(to bottom,black 75%,transparent 100%);
+    }
+    .toolbar{
+      display:flex;flex-wrap:wrap;gap:10px;
+      align-items:center;justify-content:space-between;
+      background:var(--surface);border:1px solid var(--border);
+      border-radius:var(--r);padding:10px 14px;box-shadow:var(--shadow);
+    }
+    /* Izquierda: chips de estado */
+    .toolbar-left{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+    .mp{font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:999px;border:1px solid var(--border2);color:var(--text3)}
+    /* Derecha: controles */
+    .toolbar-right{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+
+    /* Segmented control para vistas */
+    .view-toggle{display:flex;background:var(--surface2);border:1px solid var(--border2);border-radius:var(--rs);overflow:hidden}
+    .vt-btn{font-family:'Sora',sans-serif;font-size:12px;font-weight:600;border:none;padding:7px 13px;cursor:pointer;background:transparent;color:var(--text3);transition:all .2s;display:flex;align-items:center;gap:5px}
+    .vt-btn.active{background:var(--accent);color:#fff}
+    .vt-sep{width:1px;background:var(--border2)}
+
+    /* Separador visual entre grupos */
+    .toolbar-sep{width:1px;height:22px;background:var(--border2);flex-shrink:0;align-self:center}
+
+    /* Botón "Mezclar" como toggle */
+    .btn-shuffle{background:transparent;color:var(--text3);border:1px solid var(--border2)}
+    .btn-shuffle:hover{color:var(--text);border-color:var(--border);background:var(--surface2)}
+    .btn-shuffle.active{background:rgba(240,168,74,.1);border-color:var(--amber);color:var(--amber)}
+
+    /* ── STATS ── */
+    .ss{display:flex;gap:7px;margin-top:7px;flex-wrap:wrap}
+    .sc{flex:1;min-width:68px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:8px 12px;display:flex;flex-direction:column;gap:2px}
+    .sc .lbl{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3)}
+    .sc .val{font-family:'JetBrains Mono',monospace;font-size:17px;font-weight:700;color:var(--text);line-height:1}
+    .sc.g .val{color:var(--green)}.sc.r .val{color:var(--red)}.sc.a .val{color:var(--amber)}
+
+    /* PROGRESS */
+    .pr{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+    .pb{flex:1;height:4px;background:var(--surface2);border-radius:999px;overflow:hidden}
+    .pf{height:100%;background:linear-gradient(90deg,var(--accent),var(--purple));border-radius:999px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+    .ptt{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);white-space:nowrap}
+
+    /* FILTER BAR */
+    .filter-bar{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;align-items:center}
+    .filter-label{font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.8px}
+    .filter-btn{font-family:'Sora',sans-serif;font-size:12px;font-weight:600;border-radius:999px;padding:5px 14px;border:1px solid var(--border2);background:transparent;color:var(--text3);cursor:pointer;transition:all .2s}
+    .filter-btn:hover{color:var(--text);border-color:var(--border)}
+    .filter-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+    .filter-btn.f-wrong.active{background:var(--red);border-color:var(--red);color:#fff}
+    .filter-btn.f-flag.active{background:var(--amber);border-color:var(--amber);color:#111}
+    .filter-btn.f-ok.active{background:var(--green);border-color:var(--green);color:#111}
+
+    /* CARDS */
+    #qc{display:flex;flex-direction:column;gap:14px}
+    .qcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:border-color .25s;animation:fu .3s ease both;position:relative}
+    .qcard:hover{border-color:var(--border2)}
+    .qcard.answered-ok{border-color:rgba(62,207,142,.3)}
+    .qcard.answered-ko{border-color:rgba(242,107,107,.25)}
+    .qcard.is-flagged{border-color:rgba(240,168,74,.4)}
+    @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+    @keyframes pulseok{0%{box-shadow:0 0 0 0 rgba(62,207,142,.45)}70%{box-shadow:0 0 0 10px rgba(62,207,142,0)}100%{box-shadow:0 0 0 0 rgba(62,207,142,0)}}
+    .qcard.do-shake{animation:shake .4s ease!important}
+    .qcard.do-pulse{animation:pulseok .55s ease!important}
+
+    .qm{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+    .qn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);font-weight:500}
+    .bdg{font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px}
+    .bt{background:rgba(108,143,255,.12);color:var(--accent)}
+    .bm{background:rgba(167,139,250,.12);color:var(--purple)}
+    .flag-btn{margin-left:auto;width:28px;height:28px;border-radius:7px;background:transparent;border:1px solid var(--border);color:var(--text3);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .2s;flex-shrink:0}
+    .flag-btn:hover{border-color:var(--amber);color:var(--amber)}
+    .flag-btn.on{background:rgba(240,168,74,.12);border-color:var(--amber);color:var(--amber)}
+
+    .qtxt{font-size:15px;font-weight:500;color:var(--text);line-height:1.65;margin-bottom:18px}
+    .og{display:flex;flex-direction:column;gap:7px}
+    .ob{font-family:'Sora',sans-serif;font-size:13.5px;color:var(--text2);background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:12px 14px;text-align:left;cursor:pointer;display:flex;align-items:flex-start;gap:11px;transition:all .15s;width:100%;line-height:1.5}
+    .ob:not(:disabled):hover{border-color:var(--accent);color:var(--text);background:rgba(108,143,255,.06);transform:translateX(3px)}
+    .ob.sel{border-color:var(--accent);background:rgba(108,143,255,.1);color:var(--text)}
+    .ob.ok{border-color:var(--green)!important;background:rgba(62,207,142,.08)!important;color:var(--green)!important}
+    .ob.ko{border-color:var(--red)!important;background:rgba(242,107,107,.08)!important;color:var(--red)!important}
+    .ob:disabled{cursor:default}
+    .ok-key{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;background:var(--border);color:var(--text3);border-radius:5px;width:22px;height:22px;min-width:22px;display:flex;align-items:center;justify-content:center;text-transform:uppercase;transition:all .15s;margin-top:2px}
+    .ob:not(:disabled):hover .ok-key,.ob.sel .ok-key{background:var(--accent);color:#fff}
+    .ob.ok .ok-key{background:var(--green);color:#fff}
+    .ob.ko .ok-key{background:var(--red);color:#fff}
+    .correct-tag{font-size:10px;font-weight:700;color:var(--green);margin-left:auto;white-space:nowrap;padding-top:3px;display:none;flex-shrink:0}
+    .ob.ok .correct-tag{display:block}
+
+    .fb{margin-top:12px;padding:12px 14px;border-radius:var(--rs);border-left:3px solid var(--accent);background:rgba(108,143,255,.05);font-size:13px;color:var(--text2);line-height:1.6;display:none}
+    .fb.show{display:block;animation:fu .2s ease}
+    .fb .fbl{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+    .rc{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:4px 11px;border-radius:999px;margin-top:10px}
+    .rc.ok{background:rgba(62,207,142,.12);color:var(--green)}
+    .rc.ko{background:rgba(242,107,107,.12);color:var(--red)}
+    .smb{margin-top:12px;background:var(--surface2);border:1px solid var(--border2);color:var(--text2);border-radius:var(--rs);padding:9px 18px;font-family:'Sora',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+    .smb:hover{border-color:var(--accent);color:var(--accent)}
+
+    /* ONE-BY-ONE */
+    #obo-wrap{display:none}
+    #obo-wrap.active{display:block}
+    .obo-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .obo-counter{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text3)}
+    .obo-arrows{display:flex;gap:8px}
+
+    /* MODALS */
+    .ov{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
+    .ov.show{opacity:1;pointer-events:all}
+    .mod{background:var(--surface);border:1px solid var(--border2);border-radius:20px;padding:36px;max-width:480px;width:100%;text-align:center;transform:scale(.95);transition:transform .3s;max-height:90vh;overflow-y:auto}
+    .ov.show .mod{transform:scale(1)}
+    .mscore{font-family:'JetBrains Mono',monospace;font-size:68px;font-weight:700;line-height:1;margin:12px 0 6px}
+    .mod h2{font-size:20px;font-weight:700;margin-bottom:6px}
+    .mod>p{font-size:14px;color:var(--text2);margin-bottom:22px}
+    .ma{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+    .result-breakdown{display:flex;gap:10px;justify-content:center;margin-bottom:22px;flex-wrap:wrap}
+    .rb-item{background:var(--surface2);border-radius:var(--rs);padding:10px 18px;font-family:'JetBrains Mono',monospace;display:flex;flex-direction:column;gap:2px;align-items:center}
+    .rb-item .rb-val{font-size:22px;font-weight:700}
+    .rb-item .rb-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.8px}
+
+    /* KEYBOARD HELP MODAL */
+    .kbd-grid{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;text-align:left;max-width:340px;margin:0 auto 24px}
+    .kbd-key{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--surface2);border:1px solid var(--border2);border-radius:6px;padding:4px 10px;color:var(--accent);white-space:nowrap;justify-self:start;align-self:center}
+    .kbd-desc{font-size:13px;color:var(--text2);align-self:center;line-height:1.4}
+
+    /* FOOTER */
+    .site-footer{margin-top:64px;padding:24px 0 16px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px;text-align:center}
+    .footer-credits{font-size:12px;color:var(--text3);line-height:1.75}
+    .footer-credits strong{color:var(--text2);font-weight:600}
+    .footer-legal{font-size:11px;color:var(--text3);line-height:1.7;max-width:680px;margin:0 auto;opacity:.7}
+
+    .empty-state{text-align:center;padding:60px 20px;color:var(--text3);font-size:14px}
+    ::-webkit-scrollbar{width:5px}
+    ::-webkit-scrollbar-track{background:var(--bg)}
+    ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:999px}
+
+    @media(max-width:640px){
+      .sc .val{font-size:15px}
+      .qcard{padding:18px 14px}
+      .config-panel{padding:16px}
+      .toolbar{flex-direction:column;align-items:stretch}
+      .toolbar-right{justify-content:flex-end}
+      .toolbar-sep{display:none}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="header-left">
+      <span class="htag">// knowledge engineering · ugr</span>
+      <h1>Study <span>Hub</span></h1>
+      <p>Simulador de examen · Ingeniería del Conocimiento</p>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="btnHelp" title="Atajos de teclado">⌨️</button>
+      <button class="icon-btn" id="btnTheme" title="Cambiar tema">🌙</button>
+    </div>
+  </header>
+
+  <div class="config-panel" id="configPanel">
+    <div class="config-section">
+      <span class="config-label">Temas incluidos</span>
+      <div class="theme-checks" id="themeChecks"></div>
+    </div>
+    <div class="config-divider"></div>
+    <div class="config-section">
+      <span class="config-label">Número de preguntas</span>
+      <div class="count-row">
+        <button class="cnt-btn" data-count="10">10</button>
+        <button class="cnt-btn" data-count="20">20</button>
+        <button class="cnt-btn" data-count="30">30</button>
+        <button class="cnt-btn" data-count="50">50</button>
+        <button class="cnt-btn active" data-count="all">Todas</button>
+        <input class="cnt-input" id="cntCustom" type="number" min="1" placeholder="N personalizado" />
+      </div>
+    </div>
+    <div class="config-divider"></div>
+    <div class="config-actions">
+      <span class="avail-note" id="availNote">Cargando…</span>
+      <button class="btn bp btn-start" id="btnStart">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Comenzar test
+      </button>
+    </div>
+  </div>
+
+  <!-- STICKY TOOLBAR -->
+  <div class="toolbar-wrap" id="toolbarWrap" style="display:none">
+    <div class="toolbar" id="toolbar">
+
+      <!-- Izquierda: chips informativos de sesión -->
+      <div class="toolbar-left">
+        <span id="themePill" class="mp">—</span>
+        <span id="countPill" class="mp">—</span>
+      </div>
+
+      <!-- Derecha: controles agrupados -->
+      <div class="toolbar-right">
+
+        <!-- GRUPO 1: Selector de vista -->
+        <div class="view-toggle">
+          <button class="vt-btn active" id="btnViewList">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            Lista
+          </button>
+          <div class="vt-sep"></div>
+          <button class="vt-btn" id="btnViewOne">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+            Una a una
+          </button>
+        </div>
+
+        <div class="toolbar-sep"></div>
+
+        <!-- GRUPO 2: Acciones de flujo -->
+        <button class="btn btn-shuffle" id="btnShuffle" title="Activar/desactivar orden aleatorio">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+          Mezclar
+        </button>
+
+        <button class="btn btn-ghost" id="btnReset" title="Reiniciar preguntas">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+          Reiniciar
+        </button>
+
+        <button class="btn btn-ghost" id="btnConfig" title="Configurar test">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Configurar
+        </button>
+
+        <div class="toolbar-sep"></div>
+
+        <!-- ACCIÓN PRIMARIA: único botón sólido azul -->
+        <button class="btn bp" id="btnResults">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
+          Ver resultado
+        </button>
+      </div>
+    </div>
+
+    <div class="ss" id="statsStrip" style="display:none">
+      <div class="sc"><span class="lbl">Total</span><span class="val" id="totalQ">—</span></div>
+      <div class="sc"><span class="lbl">Respondidas</span><span class="val" id="answeredQ">0</span></div>
+      <div class="sc g"><span class="lbl">Correctas</span><span class="val" id="correctQ">0</span></div>
+      <div class="sc r"><span class="lbl">Incorrectas</span><span class="val" id="incorrectQ">0</span></div>
+      <div class="sc a"><span class="lbl">% Acierto</span><span class="val" id="pctQ">—</span></div>
+    </div>
+  </div>
+
+  <div class="pr" id="progressRow" style="display:none">
+    <div class="pb"><div class="pf" id="progressBar" style="width:0%"></div></div>
+    <span class="ptt" id="progressText">0 / 0</span>
+  </div>
+
+  <div class="filter-bar" id="filterBar" style="display:none">
+    <span class="filter-label">Mostrar:</span>
+    <button class="filter-btn active" data-filter="all">Todas</button>
+    <button class="filter-btn f-flag" data-filter="flagged">🚩 Marcadas</button>
+    <button class="filter-btn f-wrong" data-filter="wrong">❌ Incorrectas</button>
+    <button class="filter-btn f-ok" data-filter="ok">✅ Correctas</button>
+  </div>
+
+  <div id="obo-wrap">
+    <div id="obo-slot"></div>
+    <div class="obo-nav">
+      <span class="obo-counter" id="oboCounter">— / —</span>
+      <div class="obo-arrows">
+        <button class="btn bg" id="btnPrev">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Anterior
+        </button>
+        <button class="btn bp" id="btnNext">
+          Siguiente
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="qc"></div>
+
+  <footer class="site-footer">
+    <div class="footer-credits">
+      <strong>Ingeniería del Conocimiento</strong> (Especialidad en Computación y Sistemas Inteligentes) <br>
+      Grado en Ingeniería Informática, <strong>Universidad de Granada</strong>.<br>
+      Profesor: <strong>Juan Luis Castro Peña</strong> · Fuente: PRADO - Plataforma de Recursos de Apoyo a la Docencia
+    </div>
+    <div class="footer-legal">
+      Esta herramienta es de uso exclusivamente privado y no comercial, elaborada con fines de estudio por alumnos de la asignatura.
+      Los contenidos (preguntas, enunciados y explicaciones) son propiedad intelectual de sus autores y de la Universidad de Granada.
+      No se autoriza su reproducción, distribución ni comunicación pública fuera del ámbito académico de la asignatura sin el consentimiento expreso del titular de los derechos.
+      En caso de que el titular desee la retirada del contenido, puede contactar con el administrador de la herramienta.
+    </div>
+  </footer>
+
+</div>
+
+<!-- RESULTS MODAL -->
+<div class="ov" id="ovResults">
+  <div class="mod">
+    <div style="font-size:40px" id="mEmoji">🏆</div>
+    <h2 id="mTitle">Resultado final</h2>
+    <div class="mscore" id="mScore">—</div>
+    <p id="mSub">—</p>
+    <div class="result-breakdown" id="mBreakdown"></div>
+    <div class="ma">
+      <button class="btn bg" id="btnCloseResults">Cerrar</button>
+      <button class="btn bg danger" id="btnRetryWrong" style="display:none">Repasar incorrectas</button>
+      <button class="btn bp" id="btnRetry">Repetir mismo test</button>
+    </div>
+  </div>
+</div>
+
+<!-- KEYBOARD HELP MODAL -->
+<div class="ov" id="ovHelp">
+  <div class="mod">
+    <div style="font-size:34px;margin-bottom:14px">⌨️</div>
+    <h2 style="margin-bottom:22px">Atajos de teclado</h2>
+    <div class="kbd-grid">
+      <span class="kbd-key">A · B · C · D…</span>
+      <span class="kbd-desc">Seleccionar opción de respuesta</span>
+      <span class="kbd-key">Enter</span>
+      <span class="kbd-desc">Confirmar selección en preguntas multirespuesta</span>
+      <span class="kbd-key">← / →</span>
+      <span class="kbd-desc">Pregunta anterior / siguiente <em style="color:var(--text3)">(modo una a una)</em></span>
+      <span class="kbd-key">↑ / ↓</span>
+      <span class="kbd-desc">Igual que ← / → en modo una a una</span>
+    </div>
+    <p style="font-size:12px;color:var(--text3);margin-bottom:22px">Los atajos se desactivan cuando el cursor está en un campo de texto.</p>
+    <div class="ma"><button class="btn bp" id="btnCloseHelp">Entendido</button></div>
+  </div>
+</div>
+
+<script>
+const THEMES_CONFIG = [
+  { id: 1, label: 'Tema 1 · Introducción a los SBC' },
+  { id: 2, label: 'Tema 2 · Adquisición de Conocimiento' },
+];
+
+const S = {
+  selectedThemeIds:[1],requestedCount:'all',shuffleMode:false,
+  viewMode:'list',activeFilter:'all',pool:[],questions:[],
+  optionOrders:{},results:{},flags:{},_wrongSelections:{},
+  score:0,incorrect:0,answered:0,oboIndex:0,
+  filteredOrder:[],_baseOrder:[],sessionActive:false,
+};
+
+const themeCache = {};
+const $  = id => document.getElementById(id);
+const $$ = s  => document.querySelectorAll(s);
+
+window.addEventListener('DOMContentLoaded', async () => {
+  applyThemeUI();
+  buildThemeCheckboxes();
+  bindConfigEvents();
+  bindSessionEvents();
+  bindKeyboard();
+  await preloadAll();
+  updateAvailNote();
+});
+
+function buildThemeCheckboxes() {
+  const container = $('themeChecks');
+  THEMES_CONFIG.forEach(t => {
+    const label = document.createElement('label');
+    label.className = 'tchk';
+    label.innerHTML = `<input type="checkbox" value="${t.id}" ${S.selectedThemeIds.includes(t.id)?'checked':''}/><span class="tchk-lbl"><span class="tchk-dot"></span>${t.label}</span>`;
+    label.querySelector('input').addEventListener('change', () => { syncSelectedThemes(); updateAvailNote(); });
+    container.appendChild(label);
+  });
+}
+
+function syncSelectedThemes() {
+  S.selectedThemeIds = [...$$('#themeChecks input:checked')].map(i => +i.value);
+  if (!S.selectedThemeIds.length) {
+    const first = $('themeChecks').querySelector('input');
+    if (first) { first.checked = true; S.selectedThemeIds = [+first.value]; }
+  }
+}
+
+async function preloadAll() { await Promise.all(THEMES_CONFIG.map(t => fetchTheme(t.id))); }
+
+async function fetchTheme(id) {
+  if (themeCache[id]) return;
+  try {
+    const res = await fetch(`./data/theme${id}.json`);
+    if (!res.ok) throw new Error(`theme${id}.json no encontrado`);
+    themeCache[id] = await res.json();
+  } catch(e) { themeCache[id] = []; console.warn(e.message); }
+}
+
+function updateAvailNote() {
+  const total = S.selectedThemeIds.reduce((n,id) => n+(themeCache[id]?.length||0), 0);
+  $('availNote').textContent = `${total} pregunta${total!==1?'s':''} disponible${total!==1?'s':''}`;
+}
+
+function bindConfigEvents() {
+  $$('.cnt-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.cnt-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      S.requestedCount = btn.dataset.count==='all' ? 'all' : +btn.dataset.count;
+      $('cntCustom').value = '';
+    });
+  });
+  $('cntCustom').addEventListener('input', e => {
+    const v = parseInt(e.target.value);
+    if (v>0) { $$('.cnt-btn').forEach(b=>b.classList.remove('active')); S.requestedCount=v; }
+    else { S.requestedCount='all'; $$('.cnt-btn').forEach(b=>b.classList.toggle('active',b.dataset.count==='all')); }
+  });
+  $('btnStart').addEventListener('click', startSession);
+  $('btnTheme').addEventListener('click', toggleTheme);
+  $('btnHelp').addEventListener('click', () => openModal('ovHelp'));
+  $('btnCloseHelp').addEventListener('click', () => closeModal('ovHelp'));
+}
+
+function bindSessionEvents() {
+  $('btnShuffle').addEventListener('click', () => {
+    S.shuffleMode = !S.shuffleMode;
+    $('btnShuffle').classList.toggle('active', S.shuffleMode);
+    restartWithSameConfig();
+  });
+  $('btnReset').addEventListener('click', restartWithSameConfig);
+  $('btnConfig').addEventListener('click', () => { showUI(false); $('configPanel').style.display='block'; updateAvailNote(); });
+  $('btnViewList').addEventListener('click', () => setViewMode('list'));
+  $('btnViewOne') .addEventListener('click', () => setViewMode('one'));
+  $('btnPrev').addEventListener('click', () => oboNavigate(-1));
+  $('btnNext').addEventListener('click', () => oboNavigate(+1));
+  $$('.filter-btn').forEach(btn => btn.addEventListener('click', () => setFilter(btn.dataset.filter)));
+  $('btnResults').addEventListener('click', showResultsModal);
+  $('btnCloseResults').addEventListener('click', () => closeModal('ovResults'));
+  $('btnRetry').addEventListener('click', () => { closeModal('ovResults'); restartWithSameConfig(); });
+  $('btnRetryWrong').addEventListener('click', () => { closeModal('ovResults'); setFilter('wrong'); });
+}
+
+async function startSession() {
+  syncSelectedThemes();
+  await Promise.all(S.selectedThemeIds.map(fetchTheme));
+  S.pool = S.selectedThemeIds.flatMap(id => themeCache[id]||[]);
+  if (!S.pool.length) { alert('No hay preguntas disponibles para los temas seleccionados.'); return; }
+  const max   = S.pool.length;
+  const count = S.requestedCount==='all' ? max : Math.min(S.requestedCount, max);
+  const picked = shuf([...Array(max).keys()]).slice(0, count);
+  S.questions  = picked.map(i => S.pool[i]);
+  S.questions.forEach((q,qi) => { S.optionOrders[qi] = shuf(Object.keys(q.options)); });
+  resetSessionState();
+  S.sessionActive = true;
+  let order = S.questions.map((_,i) => i);
+  if (S.shuffleMode) order = shuf(order);
+  S._baseOrder    = [...order];
+  S.filteredOrder = [...order];
+  $('btnShuffle').classList.toggle('active', S.shuffleMode);
+  $('themePill').textContent = S.selectedThemeIds.map(id=>`T${id}`).join('+');
+  $('countPill').textContent = `${S.questions.length} preguntas`;
+  $('configPanel').style.display = 'none';
+  showUI(true);
+  $('totalQ').textContent = S.questions.length;
+  updateStats(); updateProgress();
+  setFilter('all', false);
+  render();
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+function restartWithSameConfig() { if (S.sessionActive) startSession(); }
+
+function showUI(active) {
+  $('toolbarWrap').style.display = active ? '' : 'none';
+  $('statsStrip').style.display  = active ? '' : 'none';
+  ['progressRow','filterBar'].forEach(id => $(id).style.display = active ? '' : 'none');
+  if (!active) {
+    $('qc').innerHTML = '';
+    $('obo-slot').innerHTML = '';
+    $('obo-wrap').classList.remove('active');
+    $('qc').style.display = 'flex';
+  }
+}
+
+function setFilter(filter, rerender=true) {
+  S.activeFilter = filter;
+  $$('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter===filter));
+  const base = S._baseOrder;
+  switch(filter) {
+    case 'wrong':   S.filteredOrder = base.filter(qi => S.results[qi]==='ko'); break;
+    case 'ok':      S.filteredOrder = base.filter(qi => S.results[qi]==='ok'); break;
+    case 'flagged': S.filteredOrder = base.filter(qi => S.flags[qi]);          break;
+    default:        S.filteredOrder = [...base];
+  }
+  S.oboIndex = 0;
+  if (rerender) render();
+}
+
+function render() {
+  if (S.viewMode==='one') {
+    $('obo-wrap').classList.add('active');
+    $('qc').style.display = 'none';
+    renderObo();
+  } else {
+    $('obo-wrap').classList.remove('active');
+    $('qc').style.display = 'flex';
+    renderList();
+  }
+}
+
+function renderList() {
+  const qc = $('qc'); qc.innerHTML = '';
+  if (!S.filteredOrder.length) { qc.innerHTML='<div class="empty-state">No hay preguntas para este filtro.</div>'; return; }
+  S.filteredOrder.forEach((qi,di) => { const card=buildCard(qi,di); card.style.animationDelay=di*18+'ms'; qc.appendChild(card); });
+}
+
+function renderObo() {
+  const slot = $('obo-slot');
+  if (!S.filteredOrder.length) { slot.innerHTML='<div class="empty-state">No hay preguntas para este filtro.</div>'; $('oboCounter').textContent='— / —'; return; }
+  const idx = Math.min(S.oboIndex, S.filteredOrder.length-1);
+  S.oboIndex = idx;
+  $('oboCounter').textContent = `${idx+1} / ${S.filteredOrder.length}`;
+  slot.innerHTML = '';
+  slot.appendChild(buildCard(S.filteredOrder[idx], idx));
+  $('btnPrev').disabled = idx===0;
+  $('btnNext').disabled = idx===S.filteredOrder.length-1;
+}
+
+function oboNavigate(dir) {
+  S.oboIndex = Math.max(0, Math.min(S.filteredOrder.length-1, S.oboIndex+dir));
+  renderObo();
+  requestAnimationFrame(() => {
+    const card = document.querySelector('#obo-slot .qcard');
+    if (card) card.scrollIntoView({ behavior:'smooth', block:'center' });
+  });
+}
+
+function buildCard(qi, displayIdx) {
+  const q = S.questions[qi];
+  const isM = Array.isArray(q.answer);
+  const answered = S.results[qi]!==undefined;
+  const card = document.createElement('div');
+  card.className = 'qcard'; card.id = `card-${qi}`;
+  if (S.results[qi]==='ok') card.classList.add('answered-ok');
+  if (S.results[qi]==='ko') card.classList.add('answered-ko');
+  if (S.flags[qi]) card.classList.add('is-flagged');
+  const opts = S.optionOrders[qi].map(k => {
+    const isCorrect = isM ? q.answer.includes(k) : q.answer===k;
+    const wasWrong  = S._wrongSelections[qi]?.includes(k);
+    let cls = 'ob';
+    if (answered && isCorrect) cls += ' ok';
+    if (answered && wasWrong && !isCorrect) cls += ' ko';
+    return `<button class="${cls}" data-key="${k}" ${answered?'disabled':''} onclick="handleOpt(this,'${k}',${qi},${isM})"><span class="ok-key">${k}</span><span>${q.options[k]}</span><span class="correct-tag">✓ correcta</span></button>`;
+  }).join('');
+  const resultHtml = answered ? `<span class="rc ${S.results[qi]}">${S.results[qi]==='ok'?'✓ Correcto':'✗ Incorrecto'}</span>` : '';
+  const fbShow = answered && q.description ? 'show' : '';
+  card.innerHTML = `
+    <div class="qm">
+      <span class="qn">#${displayIdx+1}</span>
+      <span class="bdg bt">Tema ${q.theme}</span>
+      ${isM?'<span class="bdg bm">Multirespuesta</span>':''}
+      <button class="flag-btn ${S.flags[qi]?'on':''}" onclick="toggleFlag(${qi})" title="Marcar para revisar">🚩</button>
+    </div>
+    <p class="qtxt">${q.question}</p>
+    <div class="og" id="og-${qi}">${opts}</div>
+    ${isM&&!answered?`<button class="smb" id="sm-${qi}" onclick="validateM(${qi})">Comprobar selección →</button>`:''}
+    <div id="res-${qi}">${resultHtml}</div>
+    <div class="fb ${fbShow}" id="fb-${qi}"><div class="fbl">📌 Nota</div>${q.description||''}</div>`;
+  return card;
+}
+
+function handleOpt(btn, key, qi, isM) {
+  if (btn.disabled) return;
+  if (isM) { btn.classList.toggle('sel'); btn.dataset.selected = btn.classList.contains('sel')?'true':'false'; }
+  else validateS(btn, key, qi);
+}
+
+function validateS(btn, key, qi) {
+  const q = S.questions[qi], ok = key===q.answer;
+  if (!ok) S._wrongSelections[qi] = [key];
+  $$(`#og-${qi} .ob`).forEach(b => { b.disabled=true; if (b.dataset.key===q.answer) b.classList.add('ok'); });
+  if (!ok) btn.classList.add('ko');
+  finalise(qi, ok);
+}
+
+function validateM(qi) {
+  const q = S.questions[qi], btns = $$(`#og-${qi} .ob`); let sel=[];
+  btns.forEach(b => {
+    b.disabled=true;
+    if (b.dataset.selected==='true') sel.push(b.dataset.key);
+    if (q.answer.includes(b.dataset.key)) b.classList.add('ok');
+    else if (b.dataset.selected==='true') b.classList.add('ko');
+  });
+  const ok = JSON.stringify(sel.sort())===JSON.stringify([...q.answer].sort());
+  if (!ok) S._wrongSelections[qi] = sel;
+  const sb=$(`sm-${qi}`); if(sb) sb.style.display='none';
+  finalise(qi, ok);
+}
+
+function finalise(qi, ok) {
+  S.results[qi] = ok?'ok':'ko';
+  ok?S.score++:S.incorrect++;
+  S.answered++;
+  const card = $(`card-${qi}`);
+  if (card) {
+    card.classList.remove('do-shake','do-pulse','answered-ok','answered-ko');
+    void card.offsetWidth;
+    card.classList.add(ok?'do-pulse':'do-shake', ok?'answered-ok':'answered-ko');
+    setTimeout(() => card.classList.remove('do-shake','do-pulse'), 600);
+  }
+  const res = $(`res-${qi}`);
+  if (res) res.innerHTML=`<span class="rc ${ok?'ok':'ko'}">${ok?'✓ Correcto':'✗ Incorrecto'}</span>`;
+  const fb = $(`fb-${qi}`);
+  if (fb && S.questions[qi].description) fb.classList.add('show');
+  updateStats(); updateProgress();
+}
+
+function toggleFlag(qi) {
+  S.flags[qi] = !S.flags[qi];
+  const card = $(`card-${qi}`);
+  if (card) { card.classList.toggle('is-flagged',S.flags[qi]); card.querySelector('.flag-btn')?.classList.toggle('on',S.flags[qi]); }
+  if (S.activeFilter==='flagged') setFilter('flagged');
+}
+
+function setViewMode(mode) {
+  S.viewMode = mode;
+  $('btnViewList').classList.toggle('active', mode==='list');
+  $('btnViewOne') .classList.toggle('active', mode==='one');
+  render();
+}
+
+function bindKeyboard() {
+  document.addEventListener('keydown', e => {
+    if (['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName)) return;
+    const k = e.key.toLowerCase();
+    if (S.viewMode==='one') {
+      if (k==='arrowleft'||k==='arrowup')    { e.preventDefault(); oboNavigate(-1); return; }
+      if (k==='arrowright'||k==='arrowdown') { e.preventDefault(); oboNavigate(+1); return; }
+    }
+    if (/^[a-h]$/.test(k)) {
+      const qi=getKeyboardTarget(); if(qi===null) return;
+      const q=S.questions[qi]; if(!q||S.results[qi]!==undefined) return;
+      const btn=document.querySelector(`#og-${qi} .ob[data-key="${k}"]`);
+      if (btn&&!btn.disabled) {
+        handleOpt(btn,k,qi,Array.isArray(q.answer));
+        requestAnimationFrame(() => {
+          const card=document.getElementById(`card-${qi}`);
+          if(card) card.scrollIntoView({behavior:'smooth',block:'center'});
+        });
+      }
+      return;
+    }
+    if (k==='enter') {
+      const qi=getKeyboardTarget(); if(qi===null) return;
+      const sb=$(`sm-${qi}`); if(sb&&sb.style.display!=='none') validateM(qi);
+    }
+  });
+}
+
+function getKeyboardTarget() {
+  if (!S.sessionActive) return null;
+  if (S.viewMode==='one') return S.filteredOrder[S.oboIndex]??null;
+  for (const qi of S.filteredOrder) { if(S.results[qi]===undefined) return qi; }
+  return null;
+}
+
+function updateStats() {
+  $('answeredQ').textContent  = S.answered;
+  $('correctQ').textContent   = S.score;
+  $('incorrectQ').textContent = S.incorrect;
+  $('pctQ').textContent       = S.answered>0 ? Math.round(S.score/S.answered*100)+'%' : '—';
+}
+
+function updateProgress() {
+  const t=S.questions.length||0, p=t>0?(S.answered/t)*100:0;
+  $('progressBar').style.width = p+'%';
+  $('progressText').textContent = S.answered+' / '+t;
+}
+
+function resetSessionState() {
+  Object.assign(S,{results:{},flags:{},_wrongSelections:{},score:0,incorrect:0,answered:0,oboIndex:0,activeFilter:'all'});
+  ['answeredQ','correctQ','incorrectQ'].forEach(id=>$(id).textContent='0');
+  $('pctQ').textContent='—';
+  $('progressBar').style.width='0%'; $('progressText').textContent='0 / 0';
+  $$('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter==='all'));
+}
+
+function showResultsModal() {
+  const t=S.questions.length, p=t>0?Math.round(S.score/t*100):0;
+  $('mEmoji').textContent = p>=80?'🏆':p>=60?'📚':'💪';
+  $('mTitle').textContent = p>=80?'¡Excelente!':p>=60?'Buen trabajo':'Sigue practicando';
+  $('mScore').textContent = p+'%';
+  $('mScore').style.color = p>=80?'var(--green)':p>=60?'var(--amber)':'var(--red)';
+  $('mSub').textContent   = 'Puntuación sobre el total del test';
+  $('mBreakdown').innerHTML = `
+    <div class="rb-item"><span class="rb-val" style="color:var(--green)">${S.score}</span><span class="rb-lbl">Correctas</span></div>
+    <div class="rb-item"><span class="rb-val" style="color:var(--red)">${S.incorrect}</span><span class="rb-lbl">Incorrectas</span></div>
+    <div class="rb-item"><span class="rb-val" style="color:var(--text2)">${t-S.answered}</span><span class="rb-lbl">Sin responder</span></div>`;
+  $('btnRetryWrong').style.display = Object.values(S.results).some(r=>r==='ko')?'inline-flex':'none';
+  openModal('ovResults');
+}
+
+function openModal(id)  { $(id).classList.add('show'); }
+function closeModal(id) { $(id).classList.remove('show'); }
+
+function toggleTheme() {
+  const next = document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',next);
+  $('btnTheme').textContent = next==='dark'?'🌙':'☀️';
+}
+function applyThemeUI() { $('btnTheme').textContent = document.documentElement.getAttribute('data-theme')==='dark'?'🌙':'☀️'; }
+
+function shuf(a) {
+  for (let i=a.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+</script>
+</body>
+</html>

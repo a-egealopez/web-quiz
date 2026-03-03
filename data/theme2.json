@@ -1,0 +1,656 @@
+[
+  {
+    "theme": 2,
+    "question": "Indica cuáles de las siguientes son ventajas de observar las tareas habituales del experto como forma de educir conocimiento:",
+    "options": {
+      "a": "Siempre sirve para saber cómo razona el experto.",
+      "b": "Sirve para captar conocimientos procedimentales.",
+      "c": "Consume mucho tiempo.",
+      "d": "Puede servir para detectar lagunas ocultas en los procedimientos."
+    },
+    "answer": ["b", "d"]
+  },
+  {
+    "theme": 2,
+    "question": "La Adquisición del Conocimiento es un paso concreto en la metodología de desarrollo de un SBC.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Ya que se produce en todas las etapas del desarrollo del SBC"
+  },
+  {
+    "theme": 2,
+    "question": "La adquisición del conocimiento se realiza en un único paso como parte del desarrollo de un SBC.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 2,
+    "question": "Empareja las palabras con las que son asociadas:",
+    "options": {
+      "a": "Taxonomía -> clasificación, Folksonomía -> etiquetado, Ontología -> red semántica, Tesauros -> terminología",
+      "b": "Taxonomía -> red semántica, Folksonomía -> clasificación, Ontología -> etiquetado, Tesauros -> terminología",
+      "c": "Taxonomía -> terminología, Folksonomía -> etiquetado, Ontología -> clasificación, Tesauros -> red semántica"
+    },
+    "answer": "a",
+    "description": "La respuesta correcta es: Taxonomía → clasificación, Folksonomía → etiquetado, Ontología → red semántica, Tesauros → terminología"
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuáles de las siguientes afirmaciones sobre la tarea de adquisición del conocimiento son ciertas?",
+    "options": {
+      "a": "El principal objetivo de las primeras reuniones es conocer personalmente al experto.",
+      "b": "El conocimiento obtenido en la tarea de adquisición de conocimiento proviene únicamente de fuentes escritas: libros, revistas, informes …",
+      "c": "En la educción, el conocimiento se obtiene de libros y revistas; mientras, en la extracción, el conocimiento se obtiene del experto.",
+      "d": "La extracción del conocimiento y la educción del conocimiento son las etapas más importantes en el proceso de adquisición del conocimiento.",
+      "e": "En el proceso de adquisición del conocimiento se debe de seguir estos pasos: primeras reuniones y estudio de viabilidad, extracción del conocimiento y educción del conocimiento.",
+      "f": "Para llevar a cabo la extracción del conocimiento existen un proceso ampliamente estandarizado que siempre debemos de utilizar.",
+      "g": "En la extracción del conocimiento se pretende minimizar el tiempo dedicado a iniciar al experto en el tema."
+    },
+    "answer": ["e", "g"],
+    "description": "En el proceso de adquisición del conocimiento todas las etapas son importantes pero si debemos destacar alguna sería la investigación realizada durante la educción del conocimiento."
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuáles de las siguientes desventajas son propias de las entrevistas?",
+    "options": {
+      "a": "No permiten que el experto añada detalles de un tema tratado anteriormente.",
+      "b": "Confían en la memoria del experto.",
+      "c": "No permiten retroalimentación por parte del experto, es decir, no permiten que el experto dé ideas para el desarrollo de próximas entrevistas.",
+      "d": "Pueden llegar a consumir mucho tiempo."
+    },
+    "answer": ["b", "d"]
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuáles de las siguientes características son importantes para realizar una buena entrevista?",
+    "options": {
+      "a": "Creer todo lo que dice el experto.",
+      "b": "Limitarse al diálogo, no usar textos.",
+      "c": "Limitar las sesiones en duración y contenido.",
+      "d": "Intentar comprobar la información."
+    },
+    "answer": ["c", "d"]
+  },
+  {
+    "theme": 2,
+    "question": "En las entrevistas abiertas:",
+    "options": {
+      "a": "se extrae información técnica del experto",
+      "b": "es necesario planificar todas las preguntas",
+      "c": "se extraen variables y esquema general",
+      "d": "se aborda información específica de casos"
+    },
+    "answer": ["a", "c"]
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuáles de la siguientes técnicas no pertenecen al proceso de educción?",
+    "options": {
+      "a": "Búsqueda de conceptos en textos",
+      "b": "Entrevistas",
+      "c": "Cuestionarios",
+      "d": "Estudio de la documentación",
+      "e": "Análisis de protocolos"
+    },
+    "answer": ["a", "d"]
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuánto debe durar una entrevista estructurada con un experto?",
+    "options": {
+      "a": "De 3 a 8 horas con descansos",
+      "b": "De 1 a 3 horas",
+      "c": "De 3 a 8 horas",
+      "d": "Todo el tiempo que sea necesario"
+    },
+    "answer": "b",
+    "description": "Se sabe que la concentración de las personas se deteriora muchísimo cuando se superan las 3 horas de trabajo continuado."
+  },
+  {
+    "theme": 2,
+    "question": "¿Qué afirmaciones son correctas?",
+    "options": {
+      "a": "La adquisición del conocimiento es un proceso continuo.",
+      "b": "La adquisición del conocimiento se realiza durante todas las etapas del desarrollo de un sistema basado en el conocimiento.",
+      "c": "La adquisición del conocimiento se realiza principalmente al inicio del desarrollo del sistema basado en el conocimiento.",
+      "d": "Las respuestas a, b y c son falsas.",
+      "e": "Todas las respuestas anteriores son correctas."
+    },
+    "answer": "e",
+    "description": "La adquisición del conocimiento es un proceso continuo que tendrá lugar durante todas las etapas del desarrollo del sistema basado en el conocimiento, principalmente al inicio de éste ya que en este momento, es cuando menos sabemos sobre el tema y más necesitamos conocer."
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuáles de las siguientes afirmaciones sobre la educción del conocimiento son ciertas?",
+    "options": {
+      "a": "La educción de conocimiento es un procedimiento que se realizará una única vez en el proceso de adquisición del conocimiento.",
+      "b": "La técnica de educción más adecuada es la entrevista estructurada ya que el ingeniero del conocimiento prepara las preguntas con antelación previa.",
+      "c": "La evaluación final de la sesión puede entenderse como una preparación para la próxima sesión.",
+      "d": "Durante la fase de preparación de la sesión, el ingeniero del conocimiento debe redactar las preguntas que hará durante la sesión.",
+      "e": "El experto no debe conocer en ningún momento qué información quiere conseguir el ingeniero del conocimiento.",
+      "f": "La mejor forma para registrar la información obtenida es grabándola en video para no transcribirla."
+    },
+    "answer": ["c", "d"],
+    "description": "Durante esta fase, el ingeniero del conocimiento reflexionará sobre el tema a tratar buscando preguntas que verdaderamente le sean útiles para obtener nueva información."
+  },
+  {
+    "theme": 2,
+    "question": "La Adquisición de Conocimientos se da antes de los demás pasos de la metodología de desarrollo de un SBC (identificación, conceptualización...).",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "La AC no es una etapa concreta de la metodología de desarrollo del SBC. Se da paralelamente a cada etapa; proporcionando la información necesaria en cada punto del desarrollo."
+  },
+  {
+    "theme": 2,
+    "question": "El ciclo de la educción de conocimientos puede paralelizarse, es decir, se pueden realizar primero todas las sesiones y luego realizar el resto de etapas.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 2,
+    "question": "La observación del experto en la realización de una tarea habitual es un proceso que garantiza mucha información de manera inmediata.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Requiere de bastante tiempo, tanto de observación como de análisis y puede no ser útil en algunos casos si las tareas no son muy informativas."
+  },
+  {
+    "theme": 2,
+    "question": "¿En qué entrevista es típica realizar la pregunta: '¿Cuáles son los elementos que influyen cuando resuelves el problema?'?",
+    "options": {
+      "a": "Entrevista abierta",
+      "b": "Entrevista estructurada"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuáles de las siguientes afirmaciones son ventajas de observar a un experto en sus labores habituales?",
+    "options": {
+      "a": "Útil para captar conocimiento",
+      "b": "A veces es inoportuna",
+      "c": "Consume tiempo",
+      "d": "Proporciona una primera idea"
+    },
+    "answer": ["a", "d"]
+  },
+  {
+    "theme": 2,
+    "question": "Seleccione la afirmación correcta sobre la Adquisición de Conocimiento (AC):",
+    "options": {
+      "a": "Normalmente en el proceso de AC, primero se realiza la educción del conocimiento y después la extracción.",
+      "b": "En la AC, se diferencia la educción (recabar de expertos) de la extracción (recabar de documentación).",
+      "c": "La adquisición de conocimiento es la tarea concreta que viene después de la identificación del problema y ya no se retoma.",
+      "d": "Gracias a los métodos automáticos de adquisición, esta tarea se hace la más fácil y menos importante."
+    },
+    "answer": "b",
+    "description": "La AC es una tarea que se realiza durante todo el proceso de desarrollo, paralelo al resto de etapas."
+  },
+  {
+    "theme": 2,
+    "question": "A la hora de analizar estructuradamente un texto:",
+    "options": {
+      "a": "Buscaremos términos claves, pero dejaremos la búsqueda de relaciones para más adelante.",
+      "b": "Es buena idea buscar frases que contengan '... porque ...', ya que conectan estados del problema.",
+      "c": "Tenemos a nuestra disposición técnicas avanzadas (aunque escasas) de análisis de texto, por lo que esto se realiza automáticamente."
+    },
+    "answer": "c",
+    "description": "En este proceso se buscan tanto términos específicos como sus relaciones. El tipo de sentencias '... porque ...' ofrecen una conexión causal. Sobre dichas técnicas, no están tan avanzadas, de modo que merece más la pena realizar el análisis a mano."
+  },
+  {
+    "theme": 2,
+    "question": "Los métodos indirectos sirven para corroborar lo obtenido mediante los métodos directos.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a",
+    "description": "El experto puede no tener un conocimiento perfecto de cuál es el desarrollo que él sigue en realidad, de esta forma el IC comprueba si coincide lo que dijo directamente."
+  },
+  {
+    "theme": 2,
+    "question": "Una de las ventajas de la entrevista es el poco tiempo que requiere.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 2,
+    "question": "¿Qué ventajas nos da la técnica de extraer conocimientos de la experiencia del experto a través de entrevistas?",
+    "options": {
+      "a": "Nos ayuda a ver el problema de forma global",
+      "b": "Consigue bastante información en poco tiempo",
+      "c": "Revela los objetivos del experto y cómo los cumple",
+      "d": "No necesita planificación",
+      "e": "La información obtenida es certera"
+    },
+    "answer": ["a", "c"]
+  },
+  {
+    "theme": 2,
+    "question": "Empareja cada etapa de la educción de conocimientos con su característica:",
+    "options": {
+      "a": "Sesión -> Repaso/educción, Transcripción -> Grabación/escritura, Preparación -> Preguntas/temas, Análisis -> Extracción de conocimientos, Evaluación -> Objetivos próxima sesión",
+      "b": "Sesión -> Preparación, Transcripción -> Análisis, Preparación -> Evaluación, Análisis -> Sesión, Evaluación -> Transcripción"
+    },
+    "answer": "a",
+    "description": "Sesión → Repaso de la sesión anterior y educción., Transcripción → Es recomendable la grabación y la posterior escritura., Preparación → Preparación de preguntas y tema(s) a tratar., Análisis → Extracción de conocimientos concretos., Evaluación → Se afianzan los objetivos de la próxima sesión."
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuál es el método más adecuado cuando falta conocimiento en la perspectiva fijada?",
+    "options": {
+      "a": "Entrevista abierta",
+      "b": "Análisis de sesión en el ciclo de educción",
+      "c": "Entrevista estructurada"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuál de las siguientes funciones NO se realiza en la extracción del conocimiento?",
+    "options": {
+      "a": "Indica el material relevante de la colección de manuales.",
+      "b": "Aprender sobre el dominio para ver si el problema es abordable mediante un SBC.",
+      "c": "Explica terminología usada.",
+      "d": "Proporciona detalles omitidos."
+    },
+    "answer": "b",
+    "description": "La abordabilidad mediante un SBC se extrae en la fase de las primeras reuniones. Una fase anterior a la de extracción del conocimiento."
+  },
+  {
+    "theme": 2,
+    "question": "El proceso de obtención de información del conocimiento de libros, manuales y personas expertas se conoce como extracción de conocimiento.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 2,
+    "question": "Enumerar las fases en el ciclo de educción de conocimiento en orden:",
+    "options": {
+      "a": "1: Preparación, 2: Sesión, 3: Transcripción, 4: Análisis, 5: Evaluación",
+      "b": "1: Sesión, 2: Preparación, 3: Análisis, 4: Transcripción, 5: Evaluación"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 2,
+    "question": "¿Qué profundidad debe alcanzarse en las primeras reuniones con los expertos, directivos y usuarios?",
+    "options": {
+      "a": "La máxima profundidad en la materia",
+      "b": "Una profundidad superficial sobre el tema"
+    },
+    "answer": "b",
+    "description": "En las primeras reuniones se debe buscar la visión general del problema"
+  },
+  {
+    "theme": 2,
+    "question": "El conocimiento extraído del experto mediante educción...",
+    "options": {
+      "a": "Contiene todo lo necesario para abordar el problema, completamente especificado.",
+      "b": "Influirá a la hora de crear el motor de inferencia.",
+      "c": "Se extrae con técnicas orientadas a que el experto no se sienta agobiado por el IC.",
+      "d": "Es extraído mediante técnicas automáticas, sin que el IC tenga que involucrarse directamente."
+    },
+    "answer": ["b", "c"],
+    "description": "También es posible que el ingeniero del conocimiento elija estar siempre molestando al experto, la mayoría de las técnicas vistas siguen esta idea."
+  },
+  {
+    "theme": 2,
+    "question": "En la extracción de conocimiento, los conocimientos...",
+    "options": {
+      "a": "se presentan de forma escrita",
+      "b": "se presentan de forma escrita y/o se obtienen de un humano",
+      "c": "se obtienen de un humano"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 2,
+    "question": "¿En qué fase de la adquisición del conocimiento el IC busca familiarizarse con la terminología del dominio?",
+    "options": {
+      "a": "Primeras reuniones y evaluación de viabilidad",
+      "b": "Educción de conocimiento",
+      "c": "Extracción de conocimiento"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 2,
+    "question": "Seleccione la opción correcta sobre la educción:",
+    "options": {
+      "a": "En la educción de conocimiento, este proviene de una persona que nos lo proporciona de forma escrita",
+      "b": "La extracción de conocimiento se realiza entrevistando a un experto",
+      "c": "En la educción de conocimiento, este proviene de una persona"
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 2,
+    "question": "La adquisición de conocimiento se realiza antes de la implementación del sistema.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 2,
+    "question": "Seleccione las afirmaciones correctas:",
+    "options": {
+      "a": "La educción se suele realizar mediante unas pautas o pasos predefinidos.",
+      "b": "Se debe de aprender del dominio tanto como sea posible para reducir tiempo de reuniones triviales.",
+      "c": "Guardar la entrevista en video evita tener que transcribirla a papel.",
+      "d": "Podemos encontrar con facilidad buenas técnicas para abordar automáticamente el proceso de extracción."
+    },
+    "answer": ["a", "b"],
+    "description": "La transcripción al papel es necesaria, nos facilita un estudio de la entrevista y nos permite analizarla detalladamente."
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuáles de estas son fases del ciclo de educción?",
+    "options": {
+      "a": "Repaso de la sesión previa.",
+      "b": "Evaluación.",
+      "c": "Sesión.",
+      "d": "Entrevista"
+    },
+    "answer": ["b", "c"],
+    "description": "El repaso de la sesión previa forma parte de la propia sesión pero no es una fase en sí. Además, la entrevista es una técnica, no una fase."
+  },
+  {
+    "theme": 2,
+    "question": "Los cuestionarios:",
+    "options": {
+      "a": "Son una forma directa de entrevistar",
+      "b": "Son tediosos e incómodos para el experto",
+      "c": "Son una forma eficiente de acumular información",
+      "d": "Consisten en realizar una serie de cuestiones verbales al experto"
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 2,
+    "question": "Indicar cuál de estas afirmaciones sobre las entrevistas son ciertas:",
+    "options": {
+      "a": "Las entrevistas forman parte del proceso de educción.",
+      "b": "Permiten obtener información de forma precisa por entrevistar directamente al experto.",
+      "c": "Los métodos indirectos permiten complementar y contrastar información de métodos directos.",
+      "d": "Las entrevistas abiertas no pueden ser planificadas de antemano."
+    },
+    "answer": ["a", "c"],
+    "description": "En muchos casos, un método indirecto permitirá llegar más allá en los detalles de conocimiento y procesos mentales."
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuál de las siguientes parejas son métodos para educción de conocimientos?",
+    "options": {
+      "a": "Todos son falsos",
+      "b": "Métodos discretos y métodos continuos",
+      "c": "Métodos globales y métodos regionales",
+      "d": "Métodos directos y métodos indirectos"
+    },
+    "answer": "d"
+  },
+  {
+    "theme": 2,
+    "question": "Para extraer el conocimiento de un experto que insiste en que resuelve los casos por intuición, ¿qué método utilizarías?",
+    "options": {
+      "a": "Observación de tareas habituales.",
+      "b": "Cuestionarios",
+      "c": "Incidentes Críticos",
+      "d": "Entrevista"
+    },
+    "answer": "a",
+    "description": "La observación de tareas habituales se aplica, en concreto, en el entrenamiento del novato."
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuáles de las siguientes son técnicas para la educción de conocimientos?",
+    "options": {
+      "a": "Estudio de la documentación",
+      "b": "Análisis estructural de textos",
+      "c": "Entrevistas",
+      "d": "Observación de tareas habituales",
+      "e": "Clasificación de conceptos",
+      "f": "Cuestionarios",
+      "g": "Aprender sobre el dominio"
+    },
+    "answer": ["c", "d", "f"]
+  },
+  {
+    "theme": 2,
+    "question": "Qué solución se puede adoptar cuando el experto no está participativo por ver su trabajo amenazado:",
+    "options": {
+      "a": "Se le pasan cuestionarios para evitar contacto cara a cara.",
+      "b": "Se realizan entrevistas abiertas para que no se sienta tan abordado.",
+      "c": "El IC se hace pasar por un becario (entrenamiento del novato) para que el experto le enseñe."
+    },
+    "answer": ["b", "c"]
+  },
+  {
+    "theme": 2,
+    "question": "¿De qué fases consta la Adquisición de Conocimiento?",
+    "options": {
+      "a": "Primeras Reuniones y Evaluación de Viabilidad",
+      "b": "Educción de Conocimiento",
+      "c": "Extracción de Conocimiento",
+      "d": "Contratación Experto sobre dicho Conocimiento",
+      "e": "Extracción de Requisitos",
+      "f": "Validación"
+    },
+    "answer": ["a", "b", "c", "d"]
+  },
+  {
+    "theme": 2,
+    "question": "Las estructuras fundamentales encargadas de transmitir información en los textos son:",
+    "options": {
+      "a": "Proposiciones, conceptos, relaciones y procedimientos.",
+      "b": "Definiciones, afirmaciones, leyes y procedimientos.",
+      "c": "Definiciones, afirmaciones y leyes.",
+      "d": "Definiciones, proposiciones, leyes y afirmaciones."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 2,
+    "question": "De los siguientes actores, indique de cuál podemos obtener conocimiento durante el proceso de AC:",
+    "options": {
+      "a": "Usuarios",
+      "b": "Expertos",
+      "c": "Directivos",
+      "d": "Todos los anteriores"
+    },
+    "answer": "d"
+  },
+  {
+    "theme": 2,
+    "question": "En el ciclo de educción NO son consideradas etapas:",
+    "options": {
+      "a": "Extracción de conocimientos",
+      "b": "Evaluación",
+      "c": "Sesión",
+      "d": "Elección de la técnica de educción"
+    },
+    "answer": ["a", "d"],
+    "description": "La evaluación sí es una etapa en la que evaluamos si se han alcanzado los objetivos."
+  },
+  {
+    "theme": 2,
+    "question": "La documentación escrita debe reservarse para resolver dudas tras las reuniones con el experto, ya que usarla antes generaría confusión.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 2,
+    "question": "El entrenamiento del novato es útil cuando el experto se muestra amigable y sabe explicar con exactitud sus procedimientos.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuál de los siguientes sistemas necesitan Adquisición de Conocimientos?",
+    "options": {
+      "a": "Ninguna es la correcta",
+      "b": "Sistemas Basados en el Conocimiento (SBC)",
+      "c": "Las dos anteriores son correctas",
+      "d": "Sistemas Expertos (SE)"
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 2,
+    "question": "El entrenamiento del novato resulta más apropiado cuando el problema es muy complejo ya que el ingeniero del conocimiento no lo puede entender.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 2,
+    "question": "Una técnica para educción de conocimientos es el método directo el cual:",
+    "options": {
+      "a": "pregunta directamente al experto lo que sabe. El experto es la única fuente; el IC confía totalmente en él.",
+      "b": "pregunta directamente al usuario lo que sabe.",
+      "c": "pregunta directamente al experto lo que sabe, pero también toma en cuenta a los usuarios."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 2,
+    "question": "¿Es en la fase del análisis del ciclo de educción donde se evalúa si se han alcanzado los objetivos?",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 2,
+    "question": "Cualquier desarrollo de un SBC debe tener un proceso concreto de AC previo a la resolución del problema planteado.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 2,
+    "question": "¿Cuál es el principal problema de las entrevistas?",
+    "options": {
+      "a": "Los problemas con el lenguaje.",
+      "b": "La falta de tiempo del experto.",
+      "c": "La estructuración de las reglas.",
+      "d": "La falta de herramientas de software."
+    },
+    "answer": "a",
+    "description": "En las primeras reuniones con el experto es importante profundizar en los factores que influyen a la hora de razonar el problema."
+  },
+  {
+    "theme": 2,
+    "question": "En las primeras reuniones con el experto es importante profundizar en los factores que influyen a la hora de razonar el problema.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "La detección es la técnica mediante la cual se deduce el dominio del problema y se relacionan conceptos similares (según el contexto de la respuesta original proporcionada)."
+  },
+  {
+    "theme": 2,
+    "question": "La detección es la técnica mediante la cual:",
+    "options": {
+      "a": "Se deduce el dominio del problema.",
+      "b": "Se relacionan conceptos similares.",
+      "c": "Ninguna de las respuestas anteriores es correcta.",
+      "d": "Se extraen los patrones mediante los cuales se define y desarrolla la información en una estructura."
+    },
+    "answer": "c",
+    "description": "La detección no se define por ninguna de las opciones técnicas presentadas en el listado a, b o d."
+  },
+  {
+    "theme": 2,
+    "question": "Indica cuáles de las siguientes son variantes de la técnica de 'Observación de tareas habituales':",
+    "options": {
+      "a": "Técnica de las 20 preguntas",
+      "b": "Entrenamiento del novato",
+      "c": "Entrenamiento del IC",
+      "d": "Imposición de restricciones"
+    },
+    "answer": "a, b",
+    "description": "Tanto la técnica de las 20 preguntas como el entrenamiento del novato se consideran variantes dentro de la observación de tareas."
+  },
+  {
+    "theme": 2,
+    "question": "Seleccione las afirmaciones correctas:",
+    "options": {
+      "a": "Las entrevistas son casos claros de métodos indirectos de educción.",
+      "b": "La técnica del entrenamiento del novato se basa en que el IC o alguien bajo su supervisión se hace pasar por un novato al que el experto debe instruir.",
+      "c": "El análisis estructural de textos es una técnica para ahorrar tiempo en la búsqueda de información por documentos.",
+      "d": "La fase de extracción se compone de dos etapas, un análisis inicial y una investigación profunda."
+    },
+    "answer": "b, c",
+    "description": "Las etapas que se describen es en la fase de educción, interrogatorio inicial e investigación profunda."
+  },
+  {
+    "theme": 2,
+    "question": "Seleccione las afirmaciones correctas:",
+    "options": {
+      "a": "La obtención de conocimientos desde un libro es un típico problema de extracción que se puede afrontar con la técnica de análisis estructural de textos.",
+      "b": "De la educción no obtenemos tanto conocimiento como pensamos, el groso del conocimiento se encuentra en la documentación escrita.",
+      "c": "Tener una gran cantidad y variedad de fuentes puede ser un problema.",
+      "d": "Los libros y manuales son muy útiles para recabar información muy concreta, especializada, centrada en los casos particulares y conocimiento de la experiencia.",
+      "e": "Las presentaciones son buenas fuentes ya que de estas podemos encontrar grandes cantidades de información bien expresada."
+    },
+    "answer": "a, c",
+    "description": "Los libros, normalmente, son útiles para extraer conocimientos básicos y generales, así como conceptos."
+  },
+  {
+    "theme": 2,
+    "question": "Seleccione los posibles problemas que pueden dar las Bases de Conocimiento:",
+    "options": {
+      "a": "Algorítmicos.",
+      "b": "Integridad.",
+      "c": "Paridad.",
+      "d": "Inconsistencias."
+    },
+    "answer": "b, d",
+    "description": "La integridad y las inconsistencias son problemas críticos en el mantenimiento de bases de conocimiento."
+  },
+  {
+    "theme": 2,
+    "question": "Es fundamental que antes de proceder a la extracción, se realice una educción para poder extraer información de la documentación con buen criterio.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Tenemos que llevar unos conocimientos para poder estar a la altura de la educción, y entendernos con el experto. Primero extracción y después educción."
+  }
+]
