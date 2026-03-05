@@ -61,56 +61,68 @@
     .config-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .avail-note{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3)}
 
+    /* MODE SELECTOR */
+    .mode-selector{display:flex;gap:10px;flex-wrap:wrap}
+    .mode-card{flex:1;min-width:180px;border:2px solid var(--border2);border-radius:var(--r);padding:16px 18px;cursor:pointer;transition:all .2s;background:var(--surface2);position:relative;text-align:left}
+    .mode-card:hover{border-color:var(--border)}
+    .mode-card.active-study{border-color:var(--accent);background:rgba(108,143,255,.07)}
+    .mode-card.active-exam{border-color:var(--amber);background:rgba(240,168,74,.07)}
+    .mode-card-icon{font-size:22px;margin-bottom:8px}
+    .mode-card-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px}
+    .mode-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
+    .mode-card-badge{position:absolute;top:10px;right:12px;font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;letter-spacing:.5px}
+    .mode-card.active-study .mode-card-badge{background:rgba(108,143,255,.15);color:var(--accent)}
+    .mode-card.active-exam .mode-card-badge{background:rgba(240,168,74,.15);color:var(--amber)}
+
     /* BUTTONS */
     .btn{font-family:'Sora',sans-serif;font-size:12px;font-weight:600;border:none;border-radius:var(--rs);padding:8px 14px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
-    /* Primario: solo "Ver resultado" */
     .bp{background:var(--accent);color:#fff}
     .bp:hover{background:var(--accent2);transform:translateY(-1px)}
-    /* Secundario neutro */
+    .be{background:var(--amber);color:#111}
+    .be:hover{background:#d4922e;transform:translateY(-1px)}
     .bg{background:var(--surface2);color:var(--text2);border:1px solid var(--border2)}
     .bg:hover{color:var(--text);background:var(--border)}
-    /* Ghost: solo contorno, para acciones de baja prioridad */
     .btn-ghost{background:transparent;color:var(--text3);border:1px solid var(--border2)}
     .btn-ghost:hover{color:var(--text);border-color:var(--border);background:var(--surface2)}
     .btn.danger{border-color:var(--red)!important;color:var(--red)!important;background:rgba(242,107,107,.06)!important}
     .btn-start{padding:11px 28px;font-size:13px}
 
-    /* ── STICKY TOOLBAR ── */
-    .toolbar-wrap{
-      position:sticky;top:0;z-index:50;
-      padding:6px 0 6px;
-      background:color-mix(in srgb, var(--bg) 82%, transparent);
-      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-      -webkit-mask-image:linear-gradient(to bottom,black 75%,transparent 100%);
-      mask-image:linear-gradient(to bottom,black 75%,transparent 100%);
-    }
-    .toolbar{
-      display:flex;flex-wrap:wrap;gap:10px;
-      align-items:center;justify-content:space-between;
-      background:var(--surface);border:1px solid var(--border);
-      border-radius:var(--r);padding:10px 14px;box-shadow:var(--shadow);
-    }
-    /* Izquierda: chips de estado */
+    /* STICKY TOOLBAR */
+    .toolbar-wrap{position:sticky;top:0;z-index:50;padding:6px 0 6px;background:color-mix(in srgb, var(--bg) 82%, transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);-webkit-mask-image:linear-gradient(to bottom,black 75%,transparent 100%);mask-image:linear-gradient(to bottom,black 75%,transparent 100%)}
+    .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:10px 14px;box-shadow:var(--shadow)}
     .toolbar-left{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
     .mp{font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:999px;border:1px solid var(--border2);color:var(--text3)}
-    /* Derecha: controles */
+    .mp.exam-pill{border-color:var(--amber);color:var(--amber);background:rgba(240,168,74,.08)}
     .toolbar-right{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-
-    /* Segmented control para vistas */
     .view-toggle{display:flex;background:var(--surface2);border:1px solid var(--border2);border-radius:var(--rs);overflow:hidden}
     .vt-btn{font-family:'Sora',sans-serif;font-size:12px;font-weight:600;border:none;padding:7px 13px;cursor:pointer;background:transparent;color:var(--text3);transition:all .2s;display:flex;align-items:center;gap:5px}
     .vt-btn.active{background:var(--accent);color:#fff}
     .vt-sep{width:1px;background:var(--border2)}
-
-    /* Separador visual entre grupos */
     .toolbar-sep{width:1px;height:22px;background:var(--border2);flex-shrink:0;align-self:center}
-
-    /* Botón "Mezclar" como toggle */
     .btn-shuffle{background:transparent;color:var(--text3);border:1px solid var(--border2)}
     .btn-shuffle:hover{color:var(--text);border-color:var(--border);background:var(--surface2)}
     .btn-shuffle.active{background:rgba(240,168,74,.1);border-color:var(--amber);color:var(--amber)}
 
-    /* ── STATS ── */
+    /* TIMER WIDGET */
+    .timer-wrap{position:relative;display:flex;align-items:center}
+    .timer-collapsed{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;padding:7px 12px;border-radius:var(--rs);border:1px solid var(--border2);background:var(--surface2);color:var(--text2);cursor:default;transition:all .25s;user-select:none;white-space:nowrap}
+    .timer-collapsed .timer-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;transition:background .3s}
+    .timer-collapsed.warn{border-color:var(--amber);color:var(--amber)}
+    .timer-collapsed.warn .timer-dot{background:var(--amber);animation:blink 1s infinite}
+    .timer-collapsed.danger{border-color:var(--red);color:var(--red)}
+    .timer-collapsed.danger .timer-dot{background:var(--red);animation:blink .5s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+    .timer-panel{position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--border2);border-radius:var(--r);padding:16px 20px;min-width:220px;box-shadow:var(--shadow);z-index:200;opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .2s,transform .2s}
+    .timer-wrap:hover .timer-panel{opacity:1;pointer-events:all;transform:translateY(0)}
+    .timer-panel-title{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
+    .timer-big{font-family:'JetBrains Mono',monospace;font-size:38px;font-weight:700;line-height:1;color:var(--text);transition:color .3s;margin-bottom:6px}
+    .timer-big.warn{color:var(--amber)}
+    .timer-big.danger{color:var(--red)}
+    .timer-bar-wrap{height:4px;background:var(--surface2);border-radius:999px;overflow:hidden;margin-bottom:10px}
+    .timer-bar{height:100%;border-radius:999px;transition:width 1s linear,background .5s}
+    .timer-label{font-size:11px;color:var(--text3)}
+
+    /* STATS */
     .ss{display:flex;gap:7px;margin-top:7px;flex-wrap:wrap}
     .sc{flex:1;min-width:68px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:8px 12px;display:flex;flex-direction:column;gap:2px}
     .sc .lbl{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3)}
@@ -133,6 +145,14 @@
     .filter-btn.f-flag.active{background:var(--amber);border-color:var(--amber);color:#111}
     .filter-btn.f-ok.active{background:var(--green);border-color:var(--green);color:#111}
 
+    /* EXAM BANNER */
+    .exam-banner{display:flex;align-items:center;gap:12px;background:rgba(240,168,74,.07);border:1px solid rgba(240,168,74,.25);border-radius:var(--r);padding:14px 18px;margin-bottom:16px;font-size:13px;color:var(--amber)}
+    .exam-banner strong{font-weight:700}
+    .times-up-banner{background:rgba(242,107,107,.08);border:1px solid rgba(242,107,107,.3);border-radius:var(--r);padding:16px 20px;margin-bottom:18px;display:flex;align-items:center;gap:14px;animation:fu .4s ease}
+    .times-up-banner .tub-icon{font-size:28px;flex-shrink:0}
+    .times-up-banner h3{font-size:15px;font-weight:700;color:var(--red);margin-bottom:2px}
+    .times-up-banner p{font-size:12px;color:var(--text3)}
+
     /* CARDS */
     #qc{display:flex;flex-direction:column;gap:14px}
     .qcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:border-color .25s;animation:fu .3s ease both;position:relative}
@@ -140,12 +160,12 @@
     .qcard.answered-ok{border-color:rgba(62,207,142,.3)}
     .qcard.answered-ko{border-color:rgba(242,107,107,.25)}
     .qcard.is-flagged{border-color:rgba(240,168,74,.4)}
+    .qcard.locked{opacity:.65;pointer-events:none}
     @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
     @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
     @keyframes pulseok{0%{box-shadow:0 0 0 0 rgba(62,207,142,.45)}70%{box-shadow:0 0 0 10px rgba(62,207,142,0)}100%{box-shadow:0 0 0 0 rgba(62,207,142,0)}}
     .qcard.do-shake{animation:shake .4s ease!important}
     .qcard.do-pulse{animation:pulseok .55s ease!important}
-
     .qm{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
     .qn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);font-weight:500}
     .bdg{font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px}
@@ -154,7 +174,6 @@
     .flag-btn{margin-left:auto;width:28px;height:28px;border-radius:7px;background:transparent;border:1px solid var(--border);color:var(--text3);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .2s;flex-shrink:0}
     .flag-btn:hover{border-color:var(--amber);color:var(--amber)}
     .flag-btn.on{background:rgba(240,168,74,.12);border-color:var(--amber);color:var(--amber)}
-
     .qtxt{font-size:15px;font-weight:500;color:var(--text);line-height:1.65;margin-bottom:18px}
     .og{display:flex;flex-direction:column;gap:7px}
     .ob{font-family:'Sora',sans-serif;font-size:13.5px;color:var(--text2);background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:12px 14px;text-align:left;cursor:pointer;display:flex;align-items:flex-start;gap:11px;transition:all .15s;width:100%;line-height:1.5}
@@ -169,7 +188,6 @@
     .ob.ko .ok-key{background:var(--red);color:#fff}
     .correct-tag{font-size:10px;font-weight:700;color:var(--green);margin-left:auto;white-space:nowrap;padding-top:3px;display:none;flex-shrink:0}
     .ob.ok .correct-tag{display:block}
-
     .fb{margin-top:12px;padding:12px 14px;border-radius:var(--rs);border-left:3px solid var(--accent);background:rgba(108,143,255,.05);font-size:13px;color:var(--text2);line-height:1.6;display:none}
     .fb.show{display:block;animation:fu .2s ease}
     .fb .fbl{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
@@ -199,6 +217,10 @@
     .rb-item{background:var(--surface2);border-radius:var(--rs);padding:10px 18px;font-family:'JetBrains Mono',monospace;display:flex;flex-direction:column;gap:2px;align-items:center}
     .rb-item .rb-val{font-size:22px;font-weight:700}
     .rb-item .rb-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.8px}
+    .exam-result-tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+    .exam-result-tag.pass{background:rgba(62,207,142,.12);color:var(--green);border:1px solid rgba(62,207,142,.3)}
+    .exam-result-tag.fail{background:rgba(242,107,107,.12);color:var(--red);border:1px solid rgba(242,107,107,.3)}
+    .time-used-note{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text3);margin-bottom:16px}
 
     /* KEYBOARD HELP MODAL */
     .kbd-grid{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;text-align:left;max-width:340px;margin:0 auto 24px}
@@ -223,6 +245,8 @@
       .toolbar{flex-direction:column;align-items:stretch}
       .toolbar-right{justify-content:flex-end}
       .toolbar-sep{display:none}
+      .mode-selector{flex-direction:column}
+      .timer-panel{right:auto;left:0}
     }
   </style>
 </head>
@@ -242,12 +266,36 @@
   </header>
 
   <div class="config-panel" id="configPanel">
+
+    <!-- MODE SELECTOR -->
+    <div class="config-section">
+      <span class="config-label">Modo de sesión</span>
+      <div class="mode-selector">
+        <div class="mode-card active-study" id="modeStudy" onclick="selectMode('study')">
+          <div class="mode-card-icon">📖</div>
+          <div class="mode-card-title">Modo Estudio</div>
+          <div class="mode-card-desc">Sin límite de tiempo. Filtra, marca preguntas y revisa explicaciones.</div>
+          <span class="mode-card-badge">Seleccionado</span>
+        </div>
+        <div class="mode-card" id="modeExam" onclick="selectMode('exam')">
+          <div class="mode-card-icon">🎓</div>
+          <div class="mode-card-title">Modo Examen</div>
+          <div class="mode-card-desc">25 preguntas · 30 minutos. Sin filtros ni explicaciones durante el test.</div>
+          <span class="mode-card-badge" style="display:none">Seleccionado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="config-divider"></div>
+
     <div class="config-section">
       <span class="config-label">Temas incluidos</span>
       <div class="theme-checks" id="themeChecks"></div>
     </div>
+
     <div class="config-divider"></div>
-    <div class="config-section">
+
+    <div class="config-section" id="countSection">
       <span class="config-label">Número de preguntas</span>
       <div class="count-row">
         <button class="cnt-btn" data-count="10">10</button>
@@ -258,63 +306,95 @@
         <input class="cnt-input" id="cntCustom" type="number" min="1" placeholder="N personalizado" />
       </div>
     </div>
+
+    <div class="config-section" id="examInfo" style="display:none">
+      <span class="config-label">Configuración del examen</span>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+        <div class="rb-item" style="background:rgba(240,168,74,.07);border:1px solid rgba(240,168,74,.2)">
+          <span class="rb-val" style="color:var(--amber);font-family:'JetBrains Mono',monospace">25</span>
+          <span class="rb-lbl">Preguntas</span>
+        </div>
+        <div class="rb-item" style="background:rgba(240,168,74,.07);border:1px solid rgba(240,168,74,.2)">
+          <span class="rb-val" style="color:var(--amber);font-family:'JetBrains Mono',monospace">30:00</span>
+          <span class="rb-lbl">Tiempo límite</span>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--text3);line-height:1.6">Las respuestas se bloquean al terminar el tiempo. No hay filtros ni notas explicativas durante la prueba.</p>
+    </div>
+
     <div class="config-divider"></div>
+
     <div class="config-actions">
       <span class="avail-note" id="availNote">Cargando…</span>
-      <button class="btn bp btn-start" id="btnStart">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        Comenzar test
-      </button>
+      <div style="display:flex;gap:8px">
+        <button class="btn bp btn-start" id="btnStart">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Comenzar estudio
+        </button>
+        <button class="btn be btn-start" id="btnStartExam" style="display:none">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Comenzar examen
+        </button>
+      </div>
     </div>
   </div>
 
   <!-- STICKY TOOLBAR -->
   <div class="toolbar-wrap" id="toolbarWrap" style="display:none">
-    <div class="toolbar" id="toolbar">
-
-      <!-- Izquierda: chips informativos de sesión -->
+    <div class="toolbar">
       <div class="toolbar-left">
         <span id="themePill" class="mp">—</span>
         <span id="countPill" class="mp">—</span>
+        <span id="examModePill" class="mp exam-pill" style="display:none">🎓 Examen</span>
       </div>
-
-      <!-- Derecha: controles agrupados -->
       <div class="toolbar-right">
 
-        <!-- GRUPO 1: Selector de vista -->
-        <div class="view-toggle">
-          <button class="vt-btn active" id="btnViewList">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-            Lista
-          </button>
-          <div class="vt-sep"></div>
-          <button class="vt-btn" id="btnViewOne">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
-            Una a una
+        <!-- TIMER (exam only) -->
+        <div class="timer-wrap" id="timerWrap" style="display:none">
+          <div class="timer-collapsed" id="timerCollapsed">
+            <span class="timer-dot"></span>
+            <span id="timerCollapsedText">30:00</span>
+          </div>
+          <div class="timer-panel">
+            <div class="timer-panel-title">⏱ Tiempo restante</div>
+            <div class="timer-big" id="timerBig">30:00</div>
+            <div class="timer-bar-wrap">
+              <div class="timer-bar" id="timerBar" style="width:100%;background:var(--green)"></div>
+            </div>
+            <div class="timer-label" id="timerLabel">30 minutos · 25 preguntas</div>
+          </div>
+        </div>
+
+        <!-- Study controls -->
+        <div id="studyControls" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+          <div class="view-toggle">
+            <button class="vt-btn active" id="btnViewList">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              Lista
+            </button>
+            <div class="vt-sep"></div>
+            <button class="vt-btn" id="btnViewOne">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+              Una a una
+            </button>
+          </div>
+          <div class="toolbar-sep"></div>
+          <button class="btn btn-shuffle" id="btnShuffle">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            Mezclar
           </button>
         </div>
 
         <div class="toolbar-sep"></div>
-
-        <!-- GRUPO 2: Acciones de flujo -->
-        <button class="btn btn-shuffle" id="btnShuffle" title="Activar/desactivar orden aleatorio">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
-          Mezclar
-        </button>
-
-        <button class="btn btn-ghost" id="btnReset" title="Reiniciar preguntas">
+        <button class="btn btn-ghost" id="btnReset">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
           Reiniciar
         </button>
-
-        <button class="btn btn-ghost" id="btnConfig" title="Configurar test">
+        <button class="btn btn-ghost" id="btnConfig">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
           Configurar
         </button>
-
         <div class="toolbar-sep"></div>
-
-        <!-- ACCIÓN PRIMARIA: único botón sólido azul -->
         <button class="btn bp" id="btnResults">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
           Ver resultado
@@ -342,6 +422,16 @@
     <button class="filter-btn f-flag" data-filter="flagged">🚩 Marcadas</button>
     <button class="filter-btn f-wrong" data-filter="wrong">❌ Incorrectas</button>
     <button class="filter-btn f-ok" data-filter="ok">✅ Correctas</button>
+  </div>
+
+  <!-- BANNERS -->
+  <div id="examActiveBanner" style="display:none" class="exam-banner">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <span><strong>Modo Examen activo</strong> — 25 preguntas · 30 minutos. Pulsa el cronómetro (toolbar) para ver el tiempo restante.</span>
+  </div>
+  <div id="timesUpBanner" style="display:none" class="times-up-banner">
+    <div class="tub-icon">⏰</div>
+    <div><h3>¡Tiempo agotado!</h3><p>Las respuestas han sido bloqueadas. Revisa los resultados a continuación.</p></div>
   </div>
 
   <div id="obo-wrap">
@@ -373,10 +463,8 @@
       Esta herramienta es de uso exclusivamente privado y no comercial, elaborada con fines de estudio por alumnos de la asignatura.
       Los contenidos (preguntas, enunciados y explicaciones) son propiedad intelectual de sus autores y de la Universidad de Granada.
       No se autoriza su reproducción, distribución ni comunicación pública fuera del ámbito académico de la asignatura sin el consentimiento expreso del titular de los derechos.
-      En caso de que el titular desee la retirada del contenido, puede contactar con el administrador de la herramienta.
     </div>
   </footer>
-
 </div>
 
 <!-- RESULTS MODAL -->
@@ -384,8 +472,10 @@
   <div class="mod">
     <div style="font-size:40px" id="mEmoji">🏆</div>
     <h2 id="mTitle">Resultado final</h2>
+    <div id="mExamTag"></div>
     <div class="mscore" id="mScore">—</div>
     <p id="mSub">—</p>
+    <div id="mTimeUsed" class="time-used-note" style="display:none"></div>
     <div class="result-breakdown" id="mBreakdown"></div>
     <div class="ma">
       <button class="btn bg" id="btnCloseResults">Cerrar</button>
@@ -401,14 +491,10 @@
     <div style="font-size:34px;margin-bottom:14px">⌨️</div>
     <h2 style="margin-bottom:22px">Atajos de teclado</h2>
     <div class="kbd-grid">
-      <span class="kbd-key">A · B · C · D…</span>
-      <span class="kbd-desc">Seleccionar opción de respuesta</span>
-      <span class="kbd-key">Enter</span>
-      <span class="kbd-desc">Confirmar selección en preguntas multirespuesta</span>
-      <span class="kbd-key">← / →</span>
-      <span class="kbd-desc">Pregunta anterior / siguiente <em style="color:var(--text3)">(modo una a una)</em></span>
-      <span class="kbd-key">↑ / ↓</span>
-      <span class="kbd-desc">Igual que ← / → en modo una a una</span>
+      <span class="kbd-key">A · B · C · D…</span><span class="kbd-desc">Seleccionar opción de respuesta</span>
+      <span class="kbd-key">Enter</span><span class="kbd-desc">Confirmar selección en preguntas multirespuesta</span>
+      <span class="kbd-key">← / →</span><span class="kbd-desc">Pregunta anterior / siguiente <em style="color:var(--text3)">(modo una a una)</em></span>
+      <span class="kbd-key">↑ / ↓</span><span class="kbd-desc">Igual que ← / → en modo una a una</span>
     </div>
     <p style="font-size:12px;color:var(--text3);margin-bottom:22px">Los atajos se desactivan cuando el cursor está en un campo de texto.</p>
     <div class="ma"><button class="btn bp" id="btnCloseHelp">Entendido</button></div>
@@ -416,23 +502,34 @@
 </div>
 
 <script>
-const THEMES_CONFIG = [
+// ── CONFIG ──────────────────────────────────────────────────────
+const THEMES_CONFIG  = [
   { id: 1, label: 'Tema 1 · Introducción a los SBC' },
   { id: 2, label: 'Tema 2 · Adquisición de Conocimiento' },
 ];
+const EXAM_QUESTIONS = 25;
+const EXAM_SECONDS   = 30 * 60;
 
+// ── STATE ───────────────────────────────────────────────────────
 const S = {
-  selectedThemeIds:[1],requestedCount:'all',shuffleMode:false,
-  viewMode:'list',activeFilter:'all',pool:[],questions:[],
-  optionOrders:{},results:{},flags:{},_wrongSelections:{},
-  score:0,incorrect:0,answered:0,oboIndex:0,
-  filteredOrder:[],_baseOrder:[],sessionActive:false,
+  selectedThemeIds:[1], requestedCount:'all', shuffleMode:false,
+  sessionMode:'study',   // 'study' | 'exam'
+  viewMode:'list', activeFilter:'all',
+  pool:[], questions:[], optionOrders:{},
+  results:{}, flags:{}, _wrongSelections:{},
+  score:0, incorrect:0, answered:0, oboIndex:0,
+  filteredOrder:[], _baseOrder:[],
+  sessionActive:false,
+  // timer
+  timerSecondsLeft:EXAM_SECONDS, timerInterval:null,
+  timesUp:false, examStartTime:null,
 };
 
 const themeCache = {};
 const $  = id => document.getElementById(id);
 const $$ = s  => document.querySelectorAll(s);
 
+// ── INIT ────────────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', async () => {
   applyThemeUI();
   buildThemeCheckboxes();
@@ -441,8 +538,28 @@ window.addEventListener('DOMContentLoaded', async () => {
   bindKeyboard();
   await preloadAll();
   updateAvailNote();
+  updateModeUI();
 });
 
+// ── MODE ────────────────────────────────────────────────────────
+function selectMode(mode) {
+  S.sessionMode = mode;
+  updateModeUI();
+}
+
+function updateModeUI() {
+  const isExam = S.sessionMode === 'exam';
+  $('modeStudy').className = 'mode-card' + (isExam ? '' : ' active-study');
+  $('modeExam').className  = 'mode-card' + (isExam ? ' active-exam' : '');
+  $('modeStudy').querySelector('.mode-card-badge').style.display = isExam ? 'none' : '';
+  $('modeExam').querySelector('.mode-card-badge').style.display  = isExam ? '' : 'none';
+  $('countSection').style.display  = isExam ? 'none' : '';
+  $('examInfo').style.display      = isExam ? '' : 'none';
+  $('btnStart').style.display      = isExam ? 'none' : '';
+  $('btnStartExam').style.display  = isExam ? '' : 'none';
+}
+
+// ── CHECKBOXES ──────────────────────────────────────────────────
 function buildThemeCheckboxes() {
   const container = $('themeChecks');
   THEMES_CONFIG.forEach(t => {
@@ -478,6 +595,7 @@ function updateAvailNote() {
   $('availNote').textContent = `${total} pregunta${total!==1?'s':''} disponible${total!==1?'s':''}`;
 }
 
+// ── BIND CONFIG EVENTS ──────────────────────────────────────────
 function bindConfigEvents() {
   $$('.cnt-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -493,11 +611,13 @@ function bindConfigEvents() {
     else { S.requestedCount='all'; $$('.cnt-btn').forEach(b=>b.classList.toggle('active',b.dataset.count==='all')); }
   });
   $('btnStart').addEventListener('click', startSession);
+  $('btnStartExam').addEventListener('click', startSession);
   $('btnTheme').addEventListener('click', toggleTheme);
   $('btnHelp').addEventListener('click', () => openModal('ovHelp'));
   $('btnCloseHelp').addEventListener('click', () => closeModal('ovHelp'));
 }
 
+// ── BIND SESSION EVENTS ─────────────────────────────────────────
 function bindSessionEvents() {
   $('btnShuffle').addEventListener('click', () => {
     S.shuffleMode = !S.shuffleMode;
@@ -505,7 +625,12 @@ function bindSessionEvents() {
     restartWithSameConfig();
   });
   $('btnReset').addEventListener('click', restartWithSameConfig);
-  $('btnConfig').addEventListener('click', () => { showUI(false); $('configPanel').style.display='block'; updateAvailNote(); });
+  $('btnConfig').addEventListener('click', () => {
+    stopTimer();
+    showUI(false);
+    $('configPanel').style.display = 'block';
+    updateAvailNote();
+  });
   $('btnViewList').addEventListener('click', () => setViewMode('list'));
   $('btnViewOne') .addEventListener('click', () => setViewMode('one'));
   $('btnPrev').addEventListener('click', () => oboNavigate(-1));
@@ -517,40 +642,62 @@ function bindSessionEvents() {
   $('btnRetryWrong').addEventListener('click', () => { closeModal('ovResults'); setFilter('wrong'); });
 }
 
+// ── START SESSION ───────────────────────────────────────────────
 async function startSession() {
   syncSelectedThemes();
   await Promise.all(S.selectedThemeIds.map(fetchTheme));
   S.pool = S.selectedThemeIds.flatMap(id => themeCache[id]||[]);
-  if (!S.pool.length) { alert('No hay preguntas disponibles para los temas seleccionados.'); return; }
-  const max   = S.pool.length;
-  const count = S.requestedCount==='all' ? max : Math.min(S.requestedCount, max);
+  if (!S.pool.length) { alert('No hay preguntas disponibles.'); return; }
+
+  const isExam = S.sessionMode === 'exam';
+  const max    = S.pool.length;
+
+  if (isExam && max < EXAM_QUESTIONS) {
+    alert(`El modo examen requiere al menos ${EXAM_QUESTIONS} preguntas. Selecciona más temas.`);
+    return;
+  }
+
+  const count  = isExam ? EXAM_QUESTIONS : (S.requestedCount==='all' ? max : Math.min(S.requestedCount, max));
   const picked = shuf([...Array(max).keys()]).slice(0, count);
   S.questions  = picked.map(i => S.pool[i]);
   S.questions.forEach((q,qi) => { S.optionOrders[qi] = shuf(Object.keys(q.options)); });
+
   resetSessionState();
   S.sessionActive = true;
+
   let order = S.questions.map((_,i) => i);
-  if (S.shuffleMode) order = shuf(order);
+  if (!isExam && S.shuffleMode) order = shuf(order);
   S._baseOrder    = [...order];
   S.filteredOrder = [...order];
+
   $('btnShuffle').classList.toggle('active', S.shuffleMode);
   $('themePill').textContent = S.selectedThemeIds.map(id=>`T${id}`).join('+');
   $('countPill').textContent = `${S.questions.length} preguntas`;
   $('configPanel').style.display = 'none';
-  showUI(true);
+
+  showUI(true, isExam);
   $('totalQ').textContent = S.questions.length;
   updateStats(); updateProgress();
   setFilter('all', false);
   render();
   window.scrollTo({ top:0, behavior:'smooth' });
+
+  if (isExam) startExamTimer();
 }
 
-function restartWithSameConfig() { if (S.sessionActive) startSession(); }
+function restartWithSameConfig() { stopTimer(); if (S.sessionActive) startSession(); }
 
-function showUI(active) {
-  $('toolbarWrap').style.display = active ? '' : 'none';
-  $('statsStrip').style.display  = active ? '' : 'none';
-  ['progressRow','filterBar'].forEach(id => $(id).style.display = active ? '' : 'none');
+// ── SHOW/HIDE UI ────────────────────────────────────────────────
+function showUI(active, isExam=false) {
+  $('toolbarWrap').style.display  = active ? '' : 'none';
+  $('statsStrip').style.display   = active ? '' : 'none';
+  $('progressRow').style.display  = active ? '' : 'none';
+  $('filterBar').style.display    = (active && !isExam) ? '' : 'none';
+  $('studyControls').style.display = (active && !isExam) ? 'flex' : 'none';
+  $('timerWrap').style.display    = (active && isExam) ? '' : 'none';
+  $('examModePill').style.display = (active && isExam) ? '' : 'none';
+  $('examActiveBanner').style.display = (active && isExam) ? '' : 'none';
+  $('timesUpBanner').style.display = 'none';
   if (!active) {
     $('qc').innerHTML = '';
     $('obo-slot').innerHTML = '';
@@ -559,6 +706,71 @@ function showUI(active) {
   }
 }
 
+// ── TIMER ───────────────────────────────────────────────────────
+function startExamTimer() {
+  S.timerSecondsLeft = EXAM_SECONDS;
+  S.timesUp          = false;
+  S.examStartTime    = Date.now();
+  updateTimerDisplay();
+  S.timerInterval = setInterval(timerTick, 1000);
+}
+
+function stopTimer() {
+  if (S.timerInterval) { clearInterval(S.timerInterval); S.timerInterval = null; }
+}
+
+function timerTick() {
+  S.timerSecondsLeft--;
+  updateTimerDisplay();
+  if (S.timerSecondsLeft <= 0) { stopTimer(); onTimesUp(); }
+}
+
+function updateTimerDisplay() {
+  const s   = Math.max(0, S.timerSecondsLeft);
+  const mm  = String(Math.floor(s/60)).padStart(2,'0');
+  const ss  = String(s % 60).padStart(2,'0');
+  const txt = `${mm}:${ss}`;
+  const pct = (s / EXAM_SECONDS) * 100;
+  const isDanger = s <= 60;
+  const isWarn   = s <= 300 && !isDanger;
+
+  const col = $('timerCollapsed');
+  col.classList.toggle('warn', isWarn);
+  col.classList.toggle('danger', isDanger);
+  $('timerCollapsedText').textContent = txt;
+
+  const big = $('timerBig');
+  big.textContent = txt;
+  big.className   = 'timer-big' + (isDanger?' danger': isWarn?' warn':'');
+
+  const bar = $('timerBar');
+  bar.style.width      = pct + '%';
+  bar.style.background = isDanger ? 'var(--red)' : isWarn ? 'var(--amber)' : 'var(--green)';
+  $('timerLabel').textContent = isDanger ? '¡Menos de 1 minuto!' : isWarn ? 'Menos de 5 minutos' : '30 minutos · 25 preguntas';
+}
+
+function onTimesUp() {
+  S.timesUp = true;
+  // Lock all unanswered
+  $$('.qcard:not(.answered-ok):not(.answered-ko)').forEach(card => {
+    card.classList.add('locked');
+    card.querySelectorAll('.ob').forEach(b => b.disabled = true);
+    card.querySelectorAll('.smb').forEach(b => b.style.display = 'none');
+  });
+  $('examActiveBanner').style.display = 'none';
+  $('timesUpBanner').style.display    = '';
+  $('timerCollapsed').classList.add('danger');
+  $('timerCollapsedText').textContent = '00:00';
+  setTimeout(showResultsModal, 1800);
+}
+
+function getTimeUsedString() {
+  if (!S.examStartTime) return null;
+  const elapsed = Math.min(EXAM_SECONDS, Math.round((Date.now() - S.examStartTime) / 1000));
+  return `${String(Math.floor(elapsed/60)).padStart(2,'0')}:${String(elapsed%60).padStart(2,'0')}`;
+}
+
+// ── FILTER ──────────────────────────────────────────────────────
 function setFilter(filter, rerender=true) {
   S.activeFilter = filter;
   $$('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter===filter));
@@ -573,8 +785,10 @@ function setFilter(filter, rerender=true) {
   if (rerender) render();
 }
 
+// ── RENDER ──────────────────────────────────────────────────────
 function render() {
-  if (S.viewMode==='one') {
+  const isExam = S.sessionMode === 'exam';
+  if (!isExam && S.viewMode==='one') {
     $('obo-wrap').classList.add('active');
     $('qc').style.display = 'none';
     renderObo();
@@ -612,42 +826,55 @@ function oboNavigate(dir) {
   });
 }
 
+// ── BUILD CARD ───────────────────────────────────────────────────
 function buildCard(qi, displayIdx) {
-  const q = S.questions[qi];
-  const isM = Array.isArray(q.answer);
-  const answered = S.results[qi]!==undefined;
+  const q      = S.questions[qi];
+  const isM    = Array.isArray(q.answer);
+  const isExam = S.sessionMode === 'exam';
+  const answered = S.results[qi] !== undefined;
+
   const card = document.createElement('div');
   card.className = 'qcard'; card.id = `card-${qi}`;
   if (S.results[qi]==='ok') card.classList.add('answered-ok');
   if (S.results[qi]==='ko') card.classList.add('answered-ko');
-  if (S.flags[qi]) card.classList.add('is-flagged');
+  if (S.flags[qi])           card.classList.add('is-flagged');
+  if (S.timesUp && !answered) card.classList.add('locked');
+
   const opts = S.optionOrders[qi].map(k => {
     const isCorrect = isM ? q.answer.includes(k) : q.answer===k;
     const wasWrong  = S._wrongSelections[qi]?.includes(k);
     let cls = 'ob';
     if (answered && isCorrect) cls += ' ok';
     if (answered && wasWrong && !isCorrect) cls += ' ko';
-    return `<button class="${cls}" data-key="${k}" ${answered?'disabled':''} onclick="handleOpt(this,'${k}',${qi},${isM})"><span class="ok-key">${k}</span><span>${q.options[k]}</span><span class="correct-tag">✓ correcta</span></button>`;
+    const dis = (answered || S.timesUp) ? 'disabled' : '';
+    return `<button class="${cls}" data-key="${k}" ${dis} onclick="handleOpt(this,'${k}',${qi},${isM})"><span class="ok-key">${k}</span><span>${q.options[k]}</span><span class="correct-tag">✓ correcta</span></button>`;
   }).join('');
-  const resultHtml = answered ? `<span class="rc ${S.results[qi]}">${S.results[qi]==='ok'?'✓ Correcto':'✗ Incorrecto'}</span>` : '';
-  const fbShow = answered && q.description ? 'show' : '';
+
+  const resultHtml = answered
+    ? `<span class="rc ${S.results[qi]}">${S.results[qi]==='ok'?'✓ Correcto':'✗ Incorrecto'}</span>`
+    : '';
+
+  const showDesc = !isExam && answered && q.description;
+  const flagHtml = isExam ? '' : `<button class="flag-btn ${S.flags[qi]?'on':''}" onclick="toggleFlag(${qi})" title="Marcar para revisar">🚩</button>`;
+
   card.innerHTML = `
     <div class="qm">
       <span class="qn">#${displayIdx+1}</span>
       <span class="bdg bt">Tema ${q.theme}</span>
       ${isM?'<span class="bdg bm">Multirespuesta</span>':''}
-      <button class="flag-btn ${S.flags[qi]?'on':''}" onclick="toggleFlag(${qi})" title="Marcar para revisar">🚩</button>
+      ${flagHtml}
     </div>
     <p class="qtxt">${q.question}</p>
     <div class="og" id="og-${qi}">${opts}</div>
-    ${isM&&!answered?`<button class="smb" id="sm-${qi}" onclick="validateM(${qi})">Comprobar selección →</button>`:''}
+    ${isM&&!answered&&!S.timesUp?`<button class="smb" id="sm-${qi}" onclick="validateM(${qi})">Comprobar selección →</button>`:''}
     <div id="res-${qi}">${resultHtml}</div>
-    <div class="fb ${fbShow}" id="fb-${qi}"><div class="fbl">📌 Nota</div>${q.description||''}</div>`;
+    <div class="fb ${showDesc?'show':''}" id="fb-${qi}"><div class="fbl">📌 Nota</div>${q.description||''}</div>`;
   return card;
 }
 
+// ── ANSWER HANDLING ─────────────────────────────────────────────
 function handleOpt(btn, key, qi, isM) {
-  if (btn.disabled) return;
+  if (btn.disabled || S.timesUp) return;
   if (isM) { btn.classList.toggle('sel'); btn.dataset.selected = btn.classList.contains('sel')?'true':'false'; }
   else validateS(btn, key, qi);
 }
@@ -687,18 +914,25 @@ function finalise(qi, ok) {
   }
   const res = $(`res-${qi}`);
   if (res) res.innerHTML=`<span class="rc ${ok?'ok':'ko'}">${ok?'✓ Correcto':'✗ Incorrecto'}</span>`;
-  const fb = $(`fb-${qi}`);
-  if (fb && S.questions[qi].description) fb.classList.add('show');
+  if (S.sessionMode==='study') {
+    const fb = $(`fb-${qi}`);
+    if (fb && S.questions[qi].description) fb.classList.add('show');
+  }
   updateStats(); updateProgress();
 }
 
+// ── FLAG ────────────────────────────────────────────────────────
 function toggleFlag(qi) {
   S.flags[qi] = !S.flags[qi];
   const card = $(`card-${qi}`);
-  if (card) { card.classList.toggle('is-flagged',S.flags[qi]); card.querySelector('.flag-btn')?.classList.toggle('on',S.flags[qi]); }
+  if (card) {
+    card.classList.toggle('is-flagged', S.flags[qi]);
+    card.querySelector('.flag-btn')?.classList.toggle('on', S.flags[qi]);
+  }
   if (S.activeFilter==='flagged') setFilter('flagged');
 }
 
+// ── VIEW MODE ────────────────────────────────────────────────────
 function setViewMode(mode) {
   S.viewMode = mode;
   $('btnViewList').classList.toggle('active', mode==='list');
@@ -706,24 +940,22 @@ function setViewMode(mode) {
   render();
 }
 
+// ── KEYBOARD ────────────────────────────────────────────────────
 function bindKeyboard() {
   document.addEventListener('keydown', e => {
     if (['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName)) return;
     const k = e.key.toLowerCase();
-    if (S.viewMode==='one') {
+    if (S.viewMode==='one' && S.sessionMode==='study') {
       if (k==='arrowleft'||k==='arrowup')    { e.preventDefault(); oboNavigate(-1); return; }
       if (k==='arrowright'||k==='arrowdown') { e.preventDefault(); oboNavigate(+1); return; }
     }
     if (/^[a-h]$/.test(k)) {
       const qi=getKeyboardTarget(); if(qi===null) return;
-      const q=S.questions[qi]; if(!q||S.results[qi]!==undefined) return;
+      const q=S.questions[qi]; if(!q||S.results[qi]!==undefined||S.timesUp) return;
       const btn=document.querySelector(`#og-${qi} .ob[data-key="${k}"]`);
       if (btn&&!btn.disabled) {
         handleOpt(btn,k,qi,Array.isArray(q.answer));
-        requestAnimationFrame(() => {
-          const card=document.getElementById(`card-${qi}`);
-          if(card) card.scrollIntoView({behavior:'smooth',block:'center'});
-        });
+        requestAnimationFrame(() => { const card=$(`card-${qi}`); if(card) card.scrollIntoView({behavior:'smooth',block:'center'}); });
       }
       return;
     }
@@ -741,6 +973,7 @@ function getKeyboardTarget() {
   return null;
 }
 
+// ── STATS & PROGRESS ────────────────────────────────────────────
 function updateStats() {
   $('answeredQ').textContent  = S.answered;
   $('correctQ').textContent   = S.score;
@@ -755,28 +988,44 @@ function updateProgress() {
 }
 
 function resetSessionState() {
-  Object.assign(S,{results:{},flags:{},_wrongSelections:{},score:0,incorrect:0,answered:0,oboIndex:0,activeFilter:'all'});
+  Object.assign(S,{results:{},flags:{},_wrongSelections:{},score:0,incorrect:0,answered:0,oboIndex:0,activeFilter:'all',timesUp:false,timerSecondsLeft:EXAM_SECONDS,examStartTime:null});
   ['answeredQ','correctQ','incorrectQ'].forEach(id=>$(id).textContent='0');
   $('pctQ').textContent='—';
   $('progressBar').style.width='0%'; $('progressText').textContent='0 / 0';
   $$('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter==='all'));
 }
 
+// ── RESULTS MODAL ────────────────────────────────────────────────
 function showResultsModal() {
-  const t=S.questions.length, p=t>0?Math.round(S.score/t*100):0;
+  const isExam = S.sessionMode === 'exam';
+  const t = S.questions.length;
+  const p = t>0 ? Math.round(S.score/t*100) : 0;
+
   $('mEmoji').textContent = p>=80?'🏆':p>=60?'📚':'💪';
   $('mTitle').textContent = p>=80?'¡Excelente!':p>=60?'Buen trabajo':'Sigue practicando';
   $('mScore').textContent = p+'%';
   $('mScore').style.color = p>=80?'var(--green)':p>=60?'var(--amber)':'var(--red)';
-  $('mSub').textContent   = 'Puntuación sobre el total del test';
+  $('mSub').textContent   = isExam ? 'Resultado del examen' : 'Puntuación sobre el total del test';
+
+  if (isExam) {
+    const passed = S.score >= Math.ceil(EXAM_QUESTIONS * 0.5);
+    $('mExamTag').innerHTML = `<span class="exam-result-tag ${passed?'pass':'fail'}">${passed?'✓ Aprobado':'✗ Suspenso'}</span>`;
+    const t = getTimeUsedString();
+    if (t) { $('mTimeUsed').textContent = `⏱ Tiempo empleado: ${t}`; $('mTimeUsed').style.display = ''; }
+  } else {
+    $('mExamTag').innerHTML = '';
+    $('mTimeUsed').style.display = 'none';
+  }
+
   $('mBreakdown').innerHTML = `
     <div class="rb-item"><span class="rb-val" style="color:var(--green)">${S.score}</span><span class="rb-lbl">Correctas</span></div>
     <div class="rb-item"><span class="rb-val" style="color:var(--red)">${S.incorrect}</span><span class="rb-lbl">Incorrectas</span></div>
     <div class="rb-item"><span class="rb-val" style="color:var(--text2)">${t-S.answered}</span><span class="rb-lbl">Sin responder</span></div>`;
-  $('btnRetryWrong').style.display = Object.values(S.results).some(r=>r==='ko')?'inline-flex':'none';
+  $('btnRetryWrong').style.display = Object.values(S.results).some(r=>r==='ko') ? 'inline-flex' : 'none';
   openModal('ovResults');
 }
 
+// ── MODALS / THEME ───────────────────────────────────────────────
 function openModal(id)  { $(id).classList.add('show'); }
 function closeModal(id) { $(id).classList.remove('show'); }
 
@@ -787,6 +1036,7 @@ function toggleTheme() {
 }
 function applyThemeUI() { $('btnTheme').textContent = document.documentElement.getAttribute('data-theme')==='dark'?'🌙':'☀️'; }
 
+// ── UTILS ────────────────────────────────────────────────────────
 function shuf(a) {
   for (let i=a.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
   return a;
