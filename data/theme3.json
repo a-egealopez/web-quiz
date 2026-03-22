@@ -1,0 +1,534 @@
+[
+  {
+    "theme": 3,
+    "question": "A la hora de analizar el grid, sólo el ingeniero de conocimiento podrá modificarlo (cambio de escala, modificación de constructores...):",
+    "options": {
+      "a": "Falso.",
+      "b": "Verdadero."
+    },
+    "answer": "a",
+    "description": "Es el experto el que propondrá cambios si no está de acuerdo con el grid creado por la técnica de la rejilla de repertorio."
+  },
+  {
+    "theme": 3,
+    "question": "¿Qué se entiende por un atributo perfecto?",
+    "options": {
+      "a": "El que presenta una homogeneidad total.",
+      "b": "El que más ganancia de información proporciona.",
+      "c": "El que divide los ejemplos conjunto con solo positivos o solo negativos."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 3,
+    "question": "Selecciona aquellas respuestas que creas que son CORRECTAS:",
+    "options": {
+      "a": "Para adquirir conocimiento por medio de la rejilla de repertorio, escogemos una serie de elementos, los agrupamos por clusters según la correlación entre unos y otros y luego preguntamos al Experto para que nos de una valoración de cada uno de ellos en diferentes ejemplos.",
+      "b": "En un árbol de decisión, podemos evitar sobreajustar empleando tantos nodos como sea necesario para reflejar todos los ejemplos positivos y negativos de entrenamiento.",
+      "c": "La entropía nos ayuda a valorar la incertidumbre existente en un nodo del árbol.",
+      "d": "Un árbol de decisión puede representar atributos continuos o discretos."
+    },
+    "answer": ["c", "d"],
+    "description": "En el caso de los atributos continuos, cada nodo tiene una función lineal que representa el subconjunto de atributos numéricos."
+  },
+  {
+    "theme": 3,
+    "question": "Si en un nodo hoja de un árbol de decisión tenemos varias muestras:",
+    "options": {
+      "a": "Elegimos al azar una de las etiquetas y se la asociamos a cada muestra.",
+      "b": "Elegiremos la etiqueta menos representada en el nodo.",
+      "c": "Tomamos como etiqueta aquella que está más fuertemente representada."
+    },
+    "answer": "c",
+    "description": "Si la etiqueta es la más fuertemente representada en el nodo implica que la mayoría de las muestras en el nodo tendrán esa etiqueta, teniendo más posibilidad de acertar en la asignación de la misma."
+  },
+  {
+    "theme": 3,
+    "question": "Seleccione las afirmaciones correctas sobre el aprendizaje de reglas:",
+    "options": {
+      "a": "El aprendizaje de reglas está libre de sobreajuste.",
+      "b": "A diferencia de un árbol de decisión, este modelo trata de buscar reglas generales, que necesariamente no dividen los datos en dos.",
+      "c": "No se pueden aplicar ningún valor heurístico para el desarrollo de dicha técnica.",
+      "d": "Esta es una técnica automática que se basa en la búsqueda reiterada de reglas que identifique a un grupo de ejemplos positivos, y sin elementos negativos que la cumplan."
+    },
+    "answer": ["b", "d"]
+  },
+  {
+    "theme": 3,
+    "question": "Seleccione las afirmaciones correctas sobre los árboles de decisión:",
+    "options": {
+      "a": "Un árbol no se puede pasar de forma directa a reglas, por lo que no parece muy útil si nuestro sistema es de reglas.",
+      "b": "Esta técnica es una técnica automática muy popular, usada también en aprendizaje automático, destinada a problemas solo de clasificación.",
+      "c": "Un árbol de decisión toma como entrada un objeto o una situación descrita a través de un conjunto de atributos y devuelve una 'decisión', el valor previsto de la salida dada la entrada.",
+      "d": "La ganancia de información y la heurística de Gini son conceptos para la elección de atributos de manera informada, siendo a la vez una medición de la bondad de la separación por el atributo.",
+      "e": "Los árboles de decisión tienen el potencial de poder representar cualquier función por lo que siempre debemos buscar el árbol óptimo para nuestros problemas."
+    },
+    "answer": ["c", "d"],
+    "description": "La ganancia de información y la heurística de Gini se usan para construir árboles de forma heurística."
+  },
+  {
+    "theme": 3,
+    "question": "Relacione qué tipo de técnica para la adquisición del conocimiento corresponde a cada una de las siguientes técnicas:",
+    "options": {
+      "a": "Aprendizaje de Reglas → Automática, Árbol de Decisión → Automática, Rejilla de Repertorio → Manual, Análisis de Protocolos → Manual",
+      "b": "Aprendizaje de Reglas → Manual, Árbol de Decisión → Automática, Rejilla de Repertorio → Manual, Análisis de Protocolos → Automática",
+      "c": "Aprendizaje de Reglas → Automática, Árbol de Decisión → Manual, Rejilla de Repertorio → Automática, Análisis de Protocolos → Manual"
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 3,
+    "question": "El 'módulo de aplicación de reglas'... (Hay dos soluciones correctas):",
+    "options": {
+      "a": "Nunca terminaría en el caso de que no existan reglas aplicables.",
+      "b": "Selecciona y aplica reglas que puedan producir cambios y/o adiciones a la base de conocimiento.",
+      "c": "Usa un enfoque guiado por datos (conocimiento) mediante el cual recorre las reglas buscando una cuya parte condición sea satisfecha por la base de datos."
+    },
+    "answer": ["b", "c"],
+    "description": "Cuando encuentra una regla cuya condición se satisface, invoca la parte acción que en muchos casos da lugar a cambios en la base de conocimiento, permitiendo en ocasiones incorporar nuevas reglas o borrarlas."
+  },
+  {
+    "theme": 3,
+    "question": "Un SBC debe clasificar un usuario en clase humano y clase robot. El experto proporciona ejemplos de cada clase, donde incorpora una descripción en formato de texto no estructurado describiendo distintos usuarios. ¿Qué técnica de adquisición del conocimiento usarías?",
+    "options": {
+      "a": "Árboles de decisión, pues sirven para aprender reglas para clasificar a partir de ejemplos.",
+      "b": "Rejilla de repertorio, pues nos serviría para aprender características y aprender conceptos que puedan servir para la posterior clasificación."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 3,
+    "question": "En el proceso de análisis del grid, el ingeniero puede tomar nuevas diferencias o semejanzas entre elementos o características si fuera conveniente para el futuro sistema:",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "b",
+    "description": "En el análisis del grid, el ingeniero necesita consultar siempre con el experto sobre lo que ha obtenido, supervisando el experto que sea correcto y pudiendo aportar este un nuevo conocimiento veraz al sistema."
+  },
+  {
+    "theme": 3,
+    "question": "En la técnica del emparrillado, ¿cuáles de las siguientes opciones pueden ser consideradas construcciones?",
+    "options": {
+      "a": "Fácil-Difícil.",
+      "b": "Longitud.",
+      "c": "Correcto-Incorrecto.",
+      "d": "Ancho-Colorido.",
+      "e": "Esfuerzo."
+    },
+    "answer": ["a", "c"],
+    "description": "Las construcciones deben ser pares de características opuestas que puedan situarse en una escala lineal. 'Ancho-Colorido' no son características relacionadas entre sí."
+  },
+  {
+    "theme": 3,
+    "question": "Los árboles de decisión:",
+    "options": {
+      "a": "Son necesarios para obtener la rejilla de repertorio.",
+      "b": "Devuelven una decisión para cada entrada.",
+      "c": "Tienen como entrada un objeto o una situación descrita a través de un conjunto de atributos.",
+      "d": "Son diseñados por el Experto."
+    },
+    "answer": ["b", "c"]
+  },
+  {
+    "theme": 3,
+    "question": "Un árbol de decisión puede recibir como entrada...",
+    "options": {
+      "a": "Solamente atributos discretos.",
+      "b": "Atributos tanto continuos como discretos.",
+      "c": "Solamente atributos continuos."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 3,
+    "question": "Los constructores nos permiten ponderar elementos con facilidad.",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 3,
+    "question": "Para construir un árbol de decisión con el algoritmo ID3 es necesario...",
+    "options": {
+      "a": "Elegir el atributo con mayor ganancia.",
+      "b": "Elegir el atributo con menor entropía.",
+      "c": "Elegir el atributo con menor ganancia.",
+      "d": "Elegir el atributo con mayor entropía."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 3,
+    "question": "Señale, de las siguientes afirmaciones, las correctas:",
+    "options": {
+      "a": "Se puede intentar evitar el sobreajuste en reglas.",
+      "b": "Los principales programas de generación de árboles generan el árbol más pequeño posible.",
+      "c": "La heurística Gini es similar a la ganancia de información.",
+      "d": "Es necesario añadir siempre reglas para los casos negativos aparte de las necesarias para los casos positivos."
+    },
+    "answer": ["a", "c"],
+    "description": "El sobreajuste en reglas se puede evitar dejando algunos ejemplos positivos no cubiertos o incluyendo algunos negativos. La heurística Gini y la ganancia de información producen resultados similares."
+  },
+  {
+    "theme": 3,
+    "question": "En el análisis del cluster, construimos un árbol por el cual vamos agrupando categorías hasta quedarnos sólo con dos. Mediante este proceso, podemos concluir que las dos categorías resultantes son las que mayor grado de correlación tienen.",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 3,
+    "question": "El sobreajuste se puede evitar:",
+    "options": {
+      "a": "Evitando insertar ejemplos negativos.",
+      "b": "Dejando algunos casos positivos fuera de las reglas.",
+      "c": "Incluyendo todos los casos positivos.",
+      "d": "Incluyendo algunos casos negativos en las reglas."
+    },
+    "answer": ["b", "d"],
+    "description": "Dejar casos positivos fuera evita ajustar al 100% los datos de entrenamiento. Incluir algunos negativos relaja la función objetivo, admitiendo futuras clasificaciones con esos casos."
+  },
+  {
+    "theme": 3,
+    "question": "De las siguientes construcciones, marque las que NO sean correctas:",
+    "options": {
+      "a": "Agradable - Repugnante.",
+      "b": "Canijo - Robusto.",
+      "c": "Seductor - Más feo que Picio.",
+      "d": "Rápido - Ágil.",
+      "e": "Espabilado - Despierto."
+    },
+    "answer": ["c", "d", "e"],
+    "description": "'Rápido-Ágil' y 'Espabilado-Despierto' son pares de sinónimos, no opuestos. 'Seductor-Más feo que Picio' no forman una escala simétrica válida."
+  },
+  {
+    "theme": 3,
+    "question": "Las técnicas Repertory Grid y Análisis de protocolos son técnicas que nos proporcionan conocimiento de forma automatizada.",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "b",
+    "description": "Ambas son técnicas manuales de adquisición del conocimiento."
+  },
+  {
+    "theme": 3,
+    "question": "En la rejilla de repertorio, el encargado de crear las construcciones y comprender que hace que cada una de ellas sea válida es trabajo de:",
+    "options": {
+      "a": "El IC.",
+      "b": "El usuario y el experto.",
+      "c": "El experto."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 3,
+    "question": "La técnica del emparrillado o rejilla de repertorio requiere un diálogo con el experto, una sesión de valoración y un análisis de resultados tras los cuales no es necesario repasar y contrastar los resultados obtenidos con el experto.",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 3,
+    "question": "Se denomina conjunto de entrenamiento al conjunto de ejemplos positivos menos el conjunto de ejemplos negativos.",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 3,
+    "question": "Selecciona las técnicas que se pueden realizar de forma AUTOMÁTICA:",
+    "options": {
+      "a": "Análisis de protocolos.",
+      "b": "Aprendizaje de reglas.",
+      "c": "Árboles de decisión.",
+      "d": "Repertory grid."
+    },
+    "answer": ["b", "c"]
+  },
+  {
+    "theme": 3,
+    "question": "El conjunto de ejemplos completo se denomina...",
+    "options": {
+      "a": "Conjunto de entrenamiento.",
+      "b": "Conjunto de test."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 3,
+    "question": "Los árboles de decisión pueden ser creados de manera:",
+    "options": {
+      "a": "Trivial: Se crea una rama por cada instancia, produciendo árboles simples, pero grandes.",
+      "b": "Pseudo óptimo: Se selecciona cada atributo de manera heurística, en función de la calidad.",
+      "c": "Óptimo: Lo más pequeño posible, facilitando la implementación.",
+      "d": "Pseudo óptimo: Se añaden elementos aleatorios para favorecer la simplicidad y optimización."
+    },
+    "answer": ["a", "b"],
+    "description": "Los árboles óptimos no son fáciles de implementar. La forma pseudo óptima usa heurísticas como la ganancia de información o Gini."
+  },
+  {
+    "theme": 3,
+    "question": "¿Cuáles de estas afirmaciones sobre los árboles de decisión son ciertas?",
+    "options": {
+      "a": "Facilita la interpretación de la decisión adoptada.",
+      "b": "Hace uso de todas las variables para decidir.",
+      "c": "Explica el comportamiento respecto a una determinada tarea de decisión.",
+      "d": "Es una pésima herramienta para el control de la gestión empresarial."
+    },
+    "answer": ["a", "c"]
+  },
+  {
+    "theme": 3,
+    "question": "El repertory grid es un sistema que hace que el experto piense el problema de forma más exhaustiva.",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 3,
+    "question": "La escala de una rejilla de repertorio no debe variar en una misma construcción y debe mantenerse de una construcción a otra.",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "b",
+    "description": "La escala puede variar entre construcciones distintas."
+  },
+  {
+    "theme": 3,
+    "question": "Un SBC debe clasificar un usuario como humano o como robot. El experto proporciona ejemplos de cada clase e incorpora una descripción concreta de las características de cada usuario y si era robot o humano. ¿Qué técnica usarías?",
+    "options": {
+      "a": "Rejilla de repertorio, para agrupar usuarios y descubrir conceptos.",
+      "b": "Árboles de decisión, pues sirven para aprender reglas para clasificar a partir de ejemplos."
+    },
+    "answer": "b"
+  },
+  {
+    "theme": 3,
+    "question": "¿Cuáles de las siguientes afirmaciones son ciertas?",
+    "options": {
+      "a": "El conjunto de ejemplos positivos se conoce como conjunto de entrenamiento.",
+      "b": "La mejor forma para inferir el árbol es la trivial ya que los árboles no son excesivamente grandes y funcionan bien con nuevas instancias.",
+      "c": "Un buen atributo es aquel que divide el conjunto de ejemplos en dos subconjuntos, cada uno de ellos con la mitad de ejemplos positivos y la mitad de ejemplos negativos.",
+      "d": "Existen múltiples formas de inferir el árbol: trivial, óptimo y pseudo-óptima.",
+      "e": "Un árbol de decisión puede tomar como entrada atributos discretos o continuos. La salida (decisión) en ambos casos será una clasificación de esos atributos."
+    },
+    "answer": "d",
+    "description": "El conjunto de entrenamiento incluye tanto ejemplos positivos como negativos. La forma trivial genera árboles grandes que no generalizan bien."
+  },
+  {
+    "theme": 3,
+    "question": "Entre las múltiples formas de inferir un árbol de decisión, la más usada y eficaz consiste en:",
+    "options": {
+      "a": "Crear una ruta del árbol para cada instancia de entrenamiento.",
+      "b": "Inferir el árbol más pequeño posible que sea compatible con todas las instancias.",
+      "c": "Seleccionar el atributo en cada nivel del árbol en función de la calidad de la división que produce."
+    },
+    "answer": "c",
+    "description": "Este es el enfoque pseudo-óptimo, usado por algoritmos como ID3."
+  },
+  {
+    "theme": 3,
+    "question": "El repertory grid, entre otras cosas, permite:",
+    "options": {
+      "a": "Organizar muy bien la información.",
+      "b": "Encontrar errores en el conocimiento.",
+      "c": "Encontrar modelos o asociaciones a investigar con mayor profundidad."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 3,
+    "question": "Los árboles de decisión…",
+    "options": {
+      "a": "Con ellos, podemos representar funciones que actúen sobre los atributos de entrada.",
+      "b": "Una buena forma de crear un árbol es ir seleccionando atributos para cada nivel que dividan de una forma adecuada los ejemplos de que disponemos.",
+      "c": "Existe un conjunto de ejemplos a partir del cual se crea el árbol que llamamos conjunto de entrenamiento.",
+      "d": "Toman decisiones sobre situaciones que deben estar descritas por atributos discretos.",
+      "e": "El mejor árbol de decisión que podemos crear a partir de un conjunto de ejemplos es aquél que resuelve todos los ejemplos sin ningún error.",
+      "f": "Por su forma de proceder, sólo pueden ser utilizados en problemas de clasificación."
+    },
+    "answer": ["a", "b", "c"],
+    "description": "Los árboles admiten atributos continuos y discretos, y pueden usarse también para regresión, no solo clasificación."
+  },
+  {
+    "theme": 3,
+    "question": "El número mínimo de elementos necesarios para poder empezar a describir similaridades o diferencias es:",
+    "options": {
+      "a": "Tres.",
+      "b": "Dos.",
+      "c": "Cuatro."
+    },
+    "answer": "a",
+    "description": "Con tres elementos se puede identificar qué hace a dos similares y diferentes del tercero, base de la técnica de la rejilla."
+  },
+  {
+    "theme": 3,
+    "question": "Marca las afirmaciones CORRECTAS:",
+    "options": {
+      "a": "Un árbol puede ser representado como un conjunto de reglas IF-THEN-ELSE.",
+      "b": "El conjunto de ejemplos positivos y negativos de los que disponemos se denomina 'Conjunto de entrenamiento'.",
+      "c": "El criterio de Gini, la Entropía y la Ganancia de información nos ayudan a conocer la calidad de la representación de la información en un nodo del árbol de decisión.",
+      "d": "En una situación ideal, los atributos deberían separar todos los ejemplos negativos y todos los ejemplos positivos."
+    },
+    "answer": ["a", "b", "c", "d"],
+    "description": "Gini mide la desigualdad de las muestras, la entropía mide la incertidumbre y la ganancia de información indica lo que aporta un nodo."
+  },
+  {
+    "theme": 3,
+    "question": "Identifique las respuestas correctas sobre los sistemas basados en reglas:",
+    "options": {
+      "a": "Es exactamente deducción en lógica proposicional clásica.",
+      "b": "Existen dependencias reversibles e irreversibles.",
+      "c": "Usan el 'modus ponens'.",
+      "d": "Los atributos que forman el consecuente nunca pasarán a ser conocidos por el sistema."
+    },
+    "answer": ["b", "c"],
+    "description": "El modus ponens establece que si A es cierto y A→B es cierto, entonces B es cierto. Los consecuentes sí pueden añadirse al conocimiento del sistema."
+  },
+  {
+    "theme": 3,
+    "question": "Un árbol de decisión toma decisiones sobre situaciones u objetos, teniendo en cuenta cualquier escenario posible sobre los atributos de estos.",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "a"
+  },
+  {
+    "theme": 3,
+    "question": "Al elegir un atributo para un árbol de decisión, un atributo perfecto divide los ejemplos en conjuntos que...",
+    "options": {
+      "a": "Contienen tantos ejemplos negativos como positivos.",
+      "b": "Contienen solo ejemplos positivos o negativos.",
+      "c": "Contienen solo ejemplos negativos.",
+      "d": "Contienen solo ejemplos positivos."
+    },
+    "answer": "b",
+    "description": "Un nodo con solo ejemplos de una clase tiene entropía 0, lo que indica una división perfecta."
+  },
+  {
+    "theme": 3,
+    "question": "Selecciona qué tres formas de inferir un árbol hemos visto en clase:",
+    "options": {
+      "a": "Óptimo, Pseudo-Óptimo y No-trivial.",
+      "b": "ID3, C4.5 y CART.",
+      "c": "Trivial, Óptimo y Pseudo-Óptimo.",
+      "d": "Trivial, Complejo y Heurístico."
+    },
+    "answer": "c"
+  },
+  {
+    "theme": 3,
+    "question": "¿Qué significa DTL?",
+    "options": {
+      "a": "Direct Tree Learning.",
+      "b": "Double Tree Linking.",
+      "c": "Double Tree Learning.",
+      "d": "Decision Tree Learning.",
+      "e": "Decision Tree Linking."
+    },
+    "answer": "d",
+    "description": "DTL significa 'Decision Tree Learning', en español 'Aprendizaje de Árboles de Decisión'."
+  },
+  {
+    "theme": 3,
+    "question": "Antes de plasmar un Grid...",
+    "options": {
+      "a": "Es muy recomendable tener cierta información previa del problema aunque no es necesario tenerlo definido completamente.",
+      "b": "Es necesario tener una idea clara del problema, haber obtenido información previa con otros métodos de adquisición de conocimientos y tener objetivos claros para analizar.",
+      "c": "No es necesario tener una idea clara del problema porque la misma rejilla de repertorio nos da la información que se necesita."
+    },
+    "answer": "b",
+    "description": "La rejilla de repertorio no es un punto de partida desde cero: requiere trabajo previo de adquisición de conocimiento para poder aplicarse correctamente."
+  },
+  {
+    "theme": 3,
+    "question": "Asocie cada forma de inferir un árbol de decisión con su definición:",
+    "options": {
+      "a": "Trivial → Se crea una ruta del árbol por cada instancia de entrenamiento. Los árboles que se crean son excesivamente grandes y no funcionan bien con instancias nuevas. | Óptimo → El árbol más pequeño posible compatible con todas las instancias (navaja de Ockham). Es inviable computacionalmente. | Pseudo-óptimo → Selección del atributo en cada nivel del árbol en función de la calidad de la división que produce.",
+      "b": "Trivial → El árbol más pequeño posible. | Óptimo → Se crea una ruta por cada instancia. | Pseudo-óptimo → Selección aleatoria de atributos.",
+      "c": "Trivial → Selección heurística de atributos. | Óptimo → Se crea una ruta por cada instancia. | Pseudo-óptimo → El árbol más pequeño posible."
+    },
+    "answer": "a",
+    "description": "La forma trivial sobreajusta; la óptima es inviable en la práctica; la pseudo-óptima (usada por ID3) es la más habitual por su equilibrio entre calidad y coste computacional."
+  },
+  {
+    "theme": 3,
+    "question": "Cuando tenemos todos los elementos de una clase, ¿cuánto vale la entropía?",
+    "options": {
+      "a": "1.",
+      "b": "0.",
+      "c": "0.5."
+    },
+    "answer": "b",
+    "description": "Entropía 0 indica que todos los elementos pertenecen a la misma clase (máxima pureza del nodo). Entropía 1 indica mezcla máxima entre clases."
+  },
+  {
+    "theme": 3,
+    "question": "El grupo más pequeño con el que se puede empezar a describir similaridades o diferencias es de:",
+    "options": {
+      "a": "El tamaño mínimo del grupo es irrelevante.",
+      "b": "Dos elementos.",
+      "c": "Tres elementos."
+    },
+    "answer": "c",
+    "description": "Con tres elementos se puede diferenciar dos de ellos respecto a un tercero, base del método triádico de la rejilla."
+  },
+  {
+    "theme": 3,
+    "question": "Selecciona las técnicas de adquisición de conocimiento que sean manuales:",
+    "options": {
+      "a": "Árboles de decisión.",
+      "b": "Rejilla de repertorio.",
+      "c": "Análisis de protocolos.",
+      "d": "Aprendizaje de reglas."
+    },
+    "answer": ["b", "c"]
+  },
+  {
+    "theme": 3,
+    "question": "¿Cuáles de estas son formas para inferir un árbol de decisión?",
+    "options": {
+      "a": "Clasificación.",
+      "b": "Óptimo.",
+      "c": "Regresión.",
+      "d": "Trivial."
+    },
+    "answer": ["b", "d"],
+    "description": "Clasificación y regresión son tareas que puede resolver un árbol, no formas de inferirlo. Las formas de inferencia son: trivial, óptimo y pseudo-óptimo."
+  },
+  {
+    "theme": 3,
+    "question": "Un árbol de decisión óptimo es el más ________ posible.",
+    "options": {
+      "a": "Grande.",
+      "b": "Pequeño.",
+      "c": "Complejo."
+    },
+    "answer": "b",
+    "description": "Según la navaja de Ockham, el árbol óptimo es el más pequeño compatible con todas las instancias, aunque es inviable computacionalmente."
+  },
+  {
+    "theme": 3,
+    "question": "En caso de que dos elementos que no deberían estarlo aparezcan ligados en una categoría, se elimina esa categoría.",
+    "options": {
+      "a": "Verdadero.",
+      "b": "Falso."
+    },
+    "answer": "b",
+    "description": "En ese caso se debe revisar y corregir con el experto, no eliminar la categoría directamente."
+  }
+]
