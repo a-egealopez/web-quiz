@@ -1,0 +1,339 @@
+[
+  {
+    "theme": 4,
+    "question": "Los conceptos o nodos en una red semántica equivalen en un frame a...",
+    "options": {
+      "a": "Valores",
+      "b": "Instancias",
+      "c": "Clases",
+      "d": "Clases, instancias y valores atributos"
+    },
+    "answer": "d",
+    "description": "Los nodos de una red semántica representan tanto clases (categorías), instancias (individuos) como valores de atributos, que son los componentes equivalentes en un frame."
+  },
+  {
+    "theme": 4,
+    "question": "Las redes semánticas se representan mediante grafos dirigidos acíclicos.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "Las redes semánticas se representan mediante grafos dirigidos etiquetados (se etiquetan los nodos y las conexiones), no necesariamente acíclicos. El término 'acíclico' no forma parte de su definición."
+  },
+  {
+    "theme": 4,
+    "question": "En las redes semánticas, cuando la herencia de una propiedad produce inconsistencias podemos... (marca todas las correctas)",
+    "options": {
+      "a": "Eliminar la propiedad de la red semántica.",
+      "b": "Mantener la propiedad general pero marcarla como no heredable.",
+      "c": "Hacer que la propiedad general no se herede si ya tiene esa propiedad explícitamente quien lo va a heredar."
+    },
+    "answer": ["b", "c"],
+    "description": "Cuando hay inconsistencias en la herencia, se puede marcar la propiedad como no heredable o usar la excepción local (si el nodo ya tiene definida esa propiedad explícitamente, no la hereda del padre)."
+  },
+  {
+    "theme": 4,
+    "question": "En las redes semánticas, una especificación hereda siempre el tipo de valor de su generalización.",
+    "options": {
+      "a": "Verdadero",
+      "b": "Falso"
+    },
+    "answer": "b",
+    "description": "No siempre se hereda el tipo de valor: en los sistemas de frames y redes semánticas existe la posibilidad de marcar propiedades como no heredables, o de que una subclase o instancia defina explícitamente su propio valor, bloqueando la herencia del padre."
+  },
+  {
+    "theme": 4,
+    "question": "Marca las afirmaciones que sean CORRECTAS sobre redes semánticas y frames.",
+    "options": {
+      "a": "Los Frames son un subtipo de red semántica.",
+      "b": "Las redes semánticas son Frames donde las clases y los individuos tienen un solo atributo.",
+      "c": "Todo lo que se puede representar mediante frames también se puede representar como una red semántica.",
+      "d": "Una de las desventajas de la herencia es el riesgo de heredar información que nos lleve a inconsistencias."
+    },
+    "answer": ["c", "d"],
+    "description": "Los frames son más expresivos que las redes semánticas, pero todo lo representable en frames puede expresarse también en redes semánticas. Además, la herencia puede provocar inconsistencias si no se gestiona adecuadamente."
+  },
+  {
+    "theme": 4,
+    "question": "Marque la respuesta correcta sobre la diferencia entre la relación Subclase-de e Instancia-de.",
+    "options": {
+      "a": "La herencia se puede realizar a través de ambas, luego son lo mismo.",
+      "b": "La herencia se puede realizar a través de ambas, pero su significado semántico es distinto. Subclase-de quiere decir que el concepto origen es una subclase de la clase destino, mientras que instancia-de significa que el concepto origen es un elemento de la clase destino.",
+      "c": "La principal diferencia es que a través de subclase-de se realiza la herencia, mientras que a través de instancia-de no.",
+      "d": "Subclase-de significa que el concepto origen es un elemento de la clase destino, e instancia-de significa que el concepto origen es parte de la clase destino."
+    },
+    "answer": "b",
+    "description": "Ambas relaciones permiten herencia, pero Subclase-de establece una jerarquía entre clases (el origen es un tipo más específico de la clase destino), mientras que Instancia-de indica que un individuo concreto pertenece a una clase."
+  },
+  {
+    "theme": 4,
+    "question": "Considera esta afirmación: 'La faceta demonio permite lanzar un procedimiento cuando se añade, se elimina o se requiere el valor del atributo'. ¿Cuál opción es correcta?",
+    "options": {
+      "a": "Es cierta, de esa forma podemos representar relaciones entre frames además de la jerarquía.",
+      "b": "Es falsa, los frames se usan para representar conocimiento y no pueden incorporar procedimientos.",
+      "c": "Es cierta, pero tendremos que implementar los procedimientos a los que llamemos.",
+      "d": "Es falsa, los valores de un atributo de un frame nunca se requieren."
+    },
+    "answer": ["a", "c"],
+    "description": "La faceta demonio sí permite asociar procedimientos a eventos sobre atributos (si-necesario, si-añadido, si-eliminado), integrando conocimiento declarativo y procedural. Es cierta en cuanto a su funcionalidad, y también es cierto que dichos procedimientos deben ser implementados."
+  },
+  {
+    "theme": 4,
+    "question": "En los frames, la herencia se puede aplicar sobre: (marca todas las correctas)",
+    "options": {
+      "a": "Sobre atributos.",
+      "b": "Sobre valores.",
+      "c": "Sobre las subclases.",
+      "d": "Sobre tipo de valores."
+    },
+    "answer": ["a", "b", "d"],
+    "description": "En los frames, cada frame hereda los atributos (slots) del frame padre, los valores de esos atributos, y las restricciones o tipo de valores. La opción c no es correcta: 'sobre las subclases' no describe un objeto de herencia sino la dirección en la que se propaga; la herencia fluye desde los padres hacia las subclases, no se aplica 'sobre' ellas."
+  },
+  {
+    "theme": 4,
+    "question": "Señala la afirmación que consideres correcta sobre los frames.",
+    "options": {
+      "a": "Los atributos se usan para representar propiedades de los individuos.",
+      "b": "Los frames son una extensión de las redes semánticas.",
+      "c": "Las facetas no se pueden heredar.",
+      "d": "La herencia en N evita las inconsistencias.",
+      "e": "Un frame tiene una superclase o más.",
+      "f": "Un frame puede tener varios nombres."
+    },
+    "answer": "a",
+    "description": "Los atributos (slots) en los frames representan propiedades de los individuos o clases. Las demás afirmaciones son incorrectas: los frames no son una extensión de redes semánticas (son modelos paralelos); las facetas sí pueden heredarse; la N-herencia no evita inconsistencias sino que las gestiona dando prioridad al valor más específico de la jerarquía; un frame raíz no tiene superclase; y cada frame tiene un único nombre identificador."
+  },
+  {
+    "theme": 4,
+    "question": "Suponga que tengo los siguientes frames: CLASE: manzana; SUBCLASE-DE=fruta; COLOR(valor=rojo). CLASE: golden; SUBCLASE-DE=manzana; COLOR(defecto=verde). ¿Cuál tipo de herencia habría que usar para que una instancia de golden sin color especificado se deduzca que es verde?",
+    "options": {
+      "a": "N-herencia.",
+      "b": "Z-herencia."
+    },
+    "answer": "b",
+    "description": "La Z-herencia recorre la jerarquía de abajo hacia arriba y toma el primer valor o valor por defecto encontrado, por lo que la instancia de golden tomaría el color verde (defecto en golden) en lugar del rojo (valor en manzana)."
+  },
+  {
+    "theme": 4,
+    "question": "¿Cuáles de las siguientes afirmaciones son ciertas sobre estándares y tecnologías de la Web Semántica? (marca todas las correctas)",
+    "options": {
+      "a": "Con OWL se puede expresar y restringir clases, expresar relaciones entre clases y expresar y restringir propiedades.",
+      "b": "RDF representa conceptos y relaciones mediante tripletas: un recurso, una propiedad y un objeto.",
+      "c": "FaCT++, Pellet y Racer son razonadores para Ontologías.",
+      "d": "Las ontologías permiten la representación del conocimiento de forma que éste sea entendible por humanos y máquinas.",
+      "e": "URI es un meta-lenguaje que se caracteriza por el uso de etiquetas entendibles para los humanos.",
+      "f": "UNICODE es el estándar que permite codificar un texto a una forma e idioma concreto."
+    },
+    "answer": ["a", "b", "c", "d"],
+    "description": "OWL es un lenguaje de ontologías rico y expresivo. RDF usa tripletas. FaCT++, Pellet y Racer son motores de inferencia estándar. Las ontologías representan conocimiento comprensible por humanos y máquinas. URI no es un meta-lenguaje con etiquetas legibles para humanos (eso describe XML). UNICODE codifica texto en cualquier forma e idioma pero no restringe a una forma e idioma concreto."
+  },
+  {
+    "theme": 4,
+    "question": "Une cada estándar con su principal característica. ¿Cuáles de las siguientes asignaciones son CORRECTAS?",
+    "options": {
+      "a": "RDF → Representa conocimiento usando tripletas.",
+      "b": "RDFS → Amplía RDF estandarizando algunas propiedades genéricas.",
+      "c": "UNICODE → Codifica textos en cualquier forma e idioma.",
+      "d": "XML → Estandariza formatos comprensibles para humanos."
+    },
+    "answer": ["a", "b", "c", "d"],
+    "description": "RDF representa conocimiento con tripletas; RDFS amplía RDF con propiedades genéricas; UNICODE codifica texto en cualquier forma e idioma; XML estandariza formatos legibles para humanos."
+  },
+  {
+    "theme": 4,
+    "question": "Seleccione las afirmaciones correctas sobre ontologías.",
+    "options": {
+      "a": "No pueden reutilizarse.",
+      "b": "Se pueden diseñar fácil y rápidamente.",
+      "c": "Suelen utilizarse para representar el conocimiento sobre un dominio concreto.",
+      "d": "Aportan conocimiento comprensible por humanos y máquinas."
+    },
+    "answer": ["c", "d"],
+    "description": "Las ontologías representan conocimiento de un dominio específico y son comprensibles tanto por humanos como por máquinas. No son fáciles de diseñar y sí pueden reutilizarse (las ontologías genéricas son especialmente valoradas por su reutilización)."
+  },
+  {
+    "theme": 4,
+    "question": "Marque las opciones CORRECTAS sobre las ontologías (versión A).",
+    "options": {
+      "a": "Son un modelo de representación del conocimiento.",
+      "b": "Permiten que las máquinas manipulen y razonen con conocimiento.",
+      "c": "Las propiedades o relaciones pueden ser de tipo objeto o de dato.",
+      "d": "Facilitan el entendimiento humano de la información representada.",
+      "e": "El reconocimiento automático consiste en la inferencia de que una clase A es menos general que una clase B.",
+      "f": "Las ontologías de aplicación representan conocimiento específico sobre un determinado dominio o tarea.",
+      "g": "Surgen para estandarizar la representación del conocimiento."
+    },
+    "answer": ["a", "b", "c", "d"],
+    "description": "Las ontologías son modelos de representación del conocimiento que permiten razonamiento automático, distinguen propiedades de objeto y de dato, y facilitan la comprensión humana. La opción e es incorrecta: el reconocimiento automático infiere que una instancia X pertenece a una clase B, y la subsunción infiere que A es más específica (subclase) de B, no 'menos general'. La opción f es incorrecta: las ontologías de aplicación combinan e integran otras ontologías para una aplicación concreta; las que representan conocimiento específico de dominio son las ontologías de dominio."
+  },
+  {
+    "theme": 4,
+    "question": "Marque las opciones CORRECTAS sobre las ontologías (versión B).",
+    "options": {
+      "a": "Son un modelo de representación del conocimiento.",
+      "b": "El reconocimiento automático consiste en la inferencia de que una clase A es menos general que una clase B.",
+      "c": "Permiten que las máquinas manipulen y razonen con conocimiento.",
+      "d": "Las propiedades o relaciones pueden ser de tipo objeto o de dato.",
+      "e": "Facilitan el entendimiento humano de la información representada.",
+      "f": "Una ontología está compuesta, entre otras cosas, por axiomas, que son los que describen las relaciones entre conceptos.",
+      "g": "Surgen para estandarizar la representación del conocimiento.",
+      "h": "Las ontologías de aplicación representan conocimiento específico sobre un determinado dominio o tarea."
+    },
+    "answer": ["a", "c", "d", "e"],
+    "description": "Las ontologías son modelos de representación del conocimiento que permiten razonamiento automático, soportan propiedades de objeto y dato, y facilitan la comprensión humana. La opción b es incorrecta: el reconocimiento automático infiere que una instancia pertenece a una clase, y la subsunción que A es más específica que B. La opción f es incorrecta: los axiomas describen las condiciones que deben verificar los conceptos, propiedades o relaciones, no las relaciones entre conceptos (eso lo hacen las propiedades de objeto). La opción h es incorrecta por la misma razón que en la versión A."
+  },
+  {
+    "theme": 4,
+    "question": "Marca aquellas respuestas que sean CORRECTAS. Las ontologías...",
+    "options": {
+      "a": "Son especificaciones y conceptualizaciones.",
+      "b": "Tienen el mismo sentido en filosofía que en Informática.",
+      "c": "Representan el conocimiento de forma que humanos y computadoras pueden entenderlo.",
+      "d": "Facilitan la comunicación y el intercambio de información entre diferentes sistemas y entidades."
+    },
+    "answer": ["a", "c", "d"],
+    "description": "Las ontologías son especificaciones formales de conceptualizaciones, representan conocimiento comprensible por humanos y máquinas, y facilitan la interoperabilidad. Su sentido en Informática difiere del filosófico: en filosofía trata del ser en general, mientras que en Informática se refiere a la descripción formal de conceptos y relaciones de un dominio para que las máquinas puedan interpretarlos."
+  },
+  {
+    "theme": 4,
+    "question": "Indique la definición correcta para cada elemento que compone una ontología. ¿Cuáles asignaciones son correctas?",
+    "options": {
+      "a": "Propiedad → Define significado y permite razonar.",
+      "b": "Axioma → Describe relaciones entre individuos.",
+      "c": "Instancia → Objeto en el dominio.",
+      "d": "Clase → Tipo de objeto, colección de individuos."
+    },
+    "answer": ["c", "d"],
+    "description": "Solo las opciones c y d son correctas. La opción a es incorrecta: las Propiedades describen relaciones entre conceptos o entre conceptos y datos, no definen significado ni permiten razonar. La opción b es incorrecta: los Axiomas describen las condiciones que deben verificar los conceptos, propiedades o relaciones (es decir, restricciones lógicas), no relaciones entre individuos. La Instancia es un objeto concreto del dominio y la Clase agrupa individuos del mismo tipo."
+  },
+  {
+    "theme": 4,
+    "question": "Enlaza cada afirmación con la clase de ontología a la que pertenece. ¿Cuáles asignaciones son CORRECTAS?",
+    "options": {
+      "a": "Ontologías de dominio → Incluyen el conocimiento específico de un dominio.",
+      "b": "Ontologías de aplicación → Combina, integra y extiende ontologías para una aplicación.",
+      "c": "Ontologías genéricas → Se suelen reutilizar.",
+      "d": "Ontologías orientadas a tareas → Generalización de Tareas."
+    },
+    "answer": ["a", "b", "c", "d"],
+    "description": "Ontologías de dominio contienen conocimiento específico de un dominio concreto; las de aplicación combinan e integran otras ontologías para una aplicación concreta; las genéricas representan conceptos de alto nivel y son especialmente valoradas por su reutilización; las orientadas a tareas representan conocimiento específico de tareas y sus generalizaciones."
+  },
+  {
+    "theme": 4,
+    "question": "En OWL, ¿cuál sería la relación entre tieneMarido y tieneCónyuge?",
+    "options": {
+      "a": "inverseFunctionalProperty",
+      "b": "transitiveProperty",
+      "c": "equivalentClass",
+      "d": "differentFrom",
+      "e": "subPropertyOf",
+      "f": "InverseOf",
+      "g": "equivalentPropertyOf"
+    },
+    "answer": "e",
+    "description": "tieneMarido es un caso específico de tieneCónyuge (todo marido es cónyuge, pero no todo cónyuge es marido), por lo que la relación correcta es subPropertyOf."
+  },
+  {
+    "theme": 4,
+    "question": "¿Cuáles de estas son propiedades de la herencia? (marca todas las correctas)",
+    "options": {
+      "a": "La herencia por defecto no es válida, salvo que haya algún indicio a favor.",
+      "b": "Las herencias que dan como resultado una contradicción no se heredan.",
+      "c": "Se puede heredar solamente una faceta.",
+      "d": "La herencia tiene la propiedad transitiva.",
+      "e": "La herencia por defecto es válida, salvo que haya algo que lo contradiga.",
+      "f": "En los frames se puede heredar de dos conceptos más generales distintos.",
+      "g": "Las instancias heredan valores pero no atributos.",
+      "h": "Todas las propiedades son heredables, salvo aquellas marcadas como no heredables."
+    },
+    "answer": ["b", "d", "e", "h"],
+    "description": "La herencia es transitiva (si A hereda de B y B de C, A hereda de C); las contradicciones no se heredan; la herencia por defecto es válida salvo que haya una excepción explícita; y todas las propiedades se heredan salvo que estén marcadas como no heredables. La opción f describe herencia múltiple, que en algunos sistemas de frames está permitida pero no es una propiedad general de la herencia."
+  },
+  {
+    "theme": 4,
+    "question": "Sea P una propiedad reflexiva, simétrica y transitiva de una ontología. Dado un individuo I, se denota Ci la clase ∃P.{I}. ¿Cuáles afirmaciones son ciertas?",
+    "options": {
+      "a": "Ci es no vacía.",
+      "b": "Dados dos individuos x e y, si ambos están relacionados mediante P con I, entonces x está relacionado mediante P con y.",
+      "c": "Si I1 ≠ I2, entonces Ci1 ∩ Ci2 = ∅.",
+      "d": "¬Ci es no vacía.",
+      "e": "Si I1 ≠ I2, entonces Ci1 ∩ Ci2 = ∅ o Ci1 = Ci2.",
+      "f": "Si I1 ≠ I2, entonces Ci1 ∪ Ci2 = Ci2."
+    },
+    "answer": ["a", "b"],
+    "description": "Como P es reflexiva, I está relacionado consigo mismo mediante P, por lo que I pertenece a Ci, que es por tanto no vacía. Como P es simétrica y transitiva, si x está relacionado con I y también lo está y, entonces por simetría I está relacionado con x, y por transitividad x está relacionado con y."
+  },
+  {
+    "theme": 4,
+    "question": "¿Cuáles de los siguientes constructores poseen descripciones correctas?",
+    "options": {
+      "a": "'Alumno ∩ someValuesFrom tiene.coche' representa la clase de los alumnos que tienen coche.",
+      "b": "'Alumno ∩ allValuesFrom tiene.coche' representa la clase de los alumnos que tienen coche.",
+      "c": "'allValuesFrom tiene_mascota.Mamifero' incluye a los individuos que no tienen mascota."
+    },
+    "answer": ["a", "c"],
+    "description": "someValuesFrom requiere al menos una relación con un individuo de la clase indicada, por eso 'Alumno ∩ someValuesFrom tiene.coche' son los alumnos que tienen al menos un coche. allValuesFrom se satisface vacuamente para individuos sin ninguna relación de ese tipo, por eso 'allValuesFrom tiene_mascota.Mamifero' incluye también a los individuos que no tienen mascota."
+  },
+  {
+    "theme": 4,
+    "question": "Considerar el axioma: ∀P.C ≡ ¬∃P.¬C. ¿Cuándo se verifica?",
+    "options": {
+      "a": "Solo se verifica si C es no vacía.",
+      "b": "Se verifica siempre.",
+      "c": "Solo se verifica si P es funcional.",
+      "d": "Nunca se verifica."
+    },
+    "answer": "b",
+    "description": "Esta equivalencia es una tautología lógica en lógica de descripción: decir 'para todo x relacionado mediante P, x pertenece a C' es equivalente a decir 'no existe x relacionado mediante P que no pertenezca a C'. Se verifica siempre."
+  },
+  {
+    "theme": 4,
+    "question": "Seleccione las afirmaciones correctas sobre ontologías OWL.",
+    "options": {
+      "a": "En una ontología no pueden existir dos clases distintas con los mismos individuos.",
+      "b": "El axioma 'Humano = Hombre ∩ Mujer' es correcto.",
+      "c": "'∃tiene_mascota.Perro' expresa la clase de los individuos que tienen algún perro como mascota.",
+      "d": "'∀esta_matriculado.{IC}' expresa la clase de individuos que están matriculados en IC y no están matriculados en ninguna otra asignatura."
+    },
+    "answer": "c",
+    "description": "La expresión ∃tiene_mascota.Perro denota correctamente a los individuos que tienen al menos un perro como mascota. La opción a es incorrecta: en OWL sí pueden existir dos clases con exactamente los mismos individuos (serían equivalentes). La opción b es incorrecta semánticamente: la intersección de Hombre y Mujer debería ser vacía, no igual a Humano. La opción d es incorrecta: ∀esta_matriculado.{IC} expresa que todos los valores de esta_matriculado son IC, pero no impide que el individuo no esté matriculado en nada (allValuesFrom es verdadero vacuamente)."
+  },
+  {
+    "theme": 4,
+    "question": "Asigne el tipo correcto para cada propiedad indicada. ¿Cuáles asignaciones son CORRECTAS?",
+    "options": {
+      "a": "Tutor, para la clase Estudiante → Propiedad de tipo objeto.",
+      "b": "Becado, para la clase Alumno → Propiedad de tipo dato.",
+      "c": "Nombre, para la clase Alumno → Propiedad de tipo dato.",
+      "d": "Asignatura, para la clase Profesor → Propiedad de tipo objeto.",
+      "e": "Fecha, para la clase Examen → Propiedad de tipo dato."
+    },
+    "answer": ["a", "b", "c", "d", "e"],
+    "description": "Tutor y Asignatura relacionan individuos con otras entidades (tipo objeto). Nombre, Becado y Fecha tienen valores literales: Nombre es un String, Becado es un Boolean y Fecha es un tipo de dato temporal (tipo dato)."
+  },
+  {
+    "theme": 4,
+    "question": "Consideremos una ontología con 'Estudiante', 'Asignatura', y propiedades 'esta_matriculado_en' y 'ha_superado'. Se desea expresar: 'los estudiantes no pueden matricularse de una asignatura que ya tengan superada'. ¿Cuáles axiomas expresan esta condición?",
+    "options": {
+      "a": "∃ha_superado ⊆ ∃esta_matriculado_en",
+      "b": "∃esta_matriculado_en.Asignatura ⊆ ¬∃ha_superado.Asignatura",
+      "c": "∃ha_superado ⊆ ¬∃esta_matriculado_en",
+      "d": "∃esta_matriculado_en.Asignatura ⊆ ∀ha_superado.Asignatura"
+    },
+    "answer": ["b", "c"],
+    "description": "La opción b expresa que quien está matriculado en alguna asignatura no la tiene superada. La opción c expresa que quien ha superado alguna asignatura no está matriculado en ella. Ambas capturan la condición requerida desde direcciones opuestas y son equivalentes entre sí."
+  },
+  {
+    "theme": 4,
+    "question": "Consideremos una ontología con 'Estudiante', 'Asignatura', una propiedad 'matriculado_en' y una propiedad de dato 'curso' (que asigna a cada Asignatura el curso en que se imparte). Se desea expresar: 'los estudiantes no pueden matricularse en TFG si están matriculados en alguna asignatura de primero o segundo'. ¿Cuáles axiomas expresan esta afirmación?",
+    "options": {
+      "a": "∀matriculado_en.{TFG} ⊆ ∃curso.¬{primero, segundo}",
+      "b": "∃matriculado_en.{TFG} ⊆ ¬∃matriculado_en.(∃curso.{primero} ∪ ∃curso.{segundo})",
+      "c": "∃matriculado_en.(∃curso.{primero} ∪ ∃curso.{segundo}) ⊆ ¬∃matriculado_en.{TFG}",
+      "d": "¬∃matriculado_en.{TFG} ⊆ ∃matriculado_en.(∃curso.{primero} ∪ ∃curso.{segundo})"
+    },
+    "answer": ["b", "c"],
+    "description": "La opción b expresa que quien está matriculado en TFG no puede estarlo en asignaturas de primero o segundo. La opción c expresa que quien está matriculado en asignaturas de primero o segundo no puede matricularse en TFG. Ambas son equivalentes y correctas. La opción a es incorrecta porque allValuesFrom sobre {TFG} se satisface vacuamente. La opción d es incorrecta porque afirma la condición contraria a la deseada."
+  }
+]
